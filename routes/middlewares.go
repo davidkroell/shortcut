@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
 )
@@ -24,7 +25,10 @@ func HeaderBinding(next http.Handler) http.Handler {
 
 		if r.Method == "POST" {
 			if r.Header.Get("Content-Type") != "application/json" {
-				log.Fatal("Wrong Content-Type in POST request. application/json expected")
+				_ = json.NewEncoder(w).Encode(ErrorResponse{
+					"Wrong Content-Type in POST request. application/json expected",
+				})
+				return
 			}
 		}
 

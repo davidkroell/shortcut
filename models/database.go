@@ -39,7 +39,7 @@ func InitDatabase(config DBConfig) *Database {
 		database.SetMaxIdleConns(4)
 
 		// check if database is available
-		if err := db.Ping(); err != nil {
+		if err := database.Ping(); err != nil {
 			log.Fatal(err)
 		}
 

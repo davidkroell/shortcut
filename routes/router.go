@@ -4,7 +4,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func InitRouter() (router *mux.Router) {
+func InitRouter() (router mux.Router) {
 	router.Use(RequestLogger, HeaderBinding)
 	router.HandleFunc("/users/auth/new", registerUser).Methods("POST")
 	router.HandleFunc("/users/auth", loginUser).Methods("POST")
