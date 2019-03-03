@@ -3,8 +3,8 @@ package models
 import "log"
 
 const (
-	createUsersTable string = `
-CREATE TABLE Users (
+	createUsersTable string = `CREATE TABLE Users
+(
   ID        CHAR(36) PRIMARY KEY,
   Email     CHAR(50)    NOT NULL UNIQUE,
   Firstname VARCHAR(50) NOT NULL,
@@ -13,21 +13,22 @@ CREATE TABLE Users (
   CreatedAt DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP,
   UpdatedAt DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP,
   LastLogin DATETIME,
-    CHECK (UpdatedAt >= CreatedAt)
+  CHECK (UpdatedAt >= CreatedAt)
 )
   ENGINE = InnoDB;`
 	dropUsersTable string = `DROP TABLE IF EXISTS Users;`
 
-	createShortcutsTable string = `
-CREATE TABLE Shortcuts (
+	createShortcutsTable string = `CREATE TABLE Shortcuts
+(
   ID              CHAR(36) PRIMARY KEY,
-  ShortIdentifier CHAR(50)      NOT NULL,
-  RedirectionURL  VARCHAR(1024) NOT NULL,
-  CreatedAt       DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP	,
+  ShortIdentifier CHAR(50)      NOT NULL UNIQUE,
+  RedirectURL     VARCHAR(1024) NOT NULL,
+  RedirectStatus  INT(3)        NOT NULL,
+  CreatedAt       DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP,
   UpdatedAt       DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP,
   ValidThru       DATETIME      NOT NULL,
   UserID          CHAR(36)      NOT NULL,
-  
+
   CHECK (ValidThru > CreatedAt),
   CHECK (UpdatedAt >= CreatedAt),
 
@@ -37,8 +38,8 @@ CREATE TABLE Shortcuts (
 `
 	dropShortcutsTable string = `DROP TABLE IF EXISTS Shortcuts;`
 
-	createShortcutLogsTable string = `
-CREATE TABLE ShortcutLog (
+	createShortcutLogsTable string = `CREATE TABLE ShortcutLog
+(
   ShortcutID    CHAR(36),
   IPAddress     VARCHAR(39),
   UserAgent     VARCHAR(100),

@@ -21,5 +21,7 @@ func InitRouter() (router mux.Router) {
 	api.HandleFunc("/user", getUser).Methods("GET")
 	api.HandleFunc("/user", updateUser).Methods("PUT")
 
+	router.HandleFunc("/{shortId:[a-zA-Z0-9]+}", forwardShortcut).Methods("GET")
+
 	return
 }

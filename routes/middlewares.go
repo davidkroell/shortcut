@@ -1,10 +1,12 @@
 package routes
 
 import (
-	"encoding/json"
 	"log"
 	"net/http"
 )
+
+var jsonBody = "application/json"
+var htmlBody = "text/html"
 
 // MiddlewareFunc is a custom Middleware type
 type MiddlewareFunc func(http.Handler) http.Handler
@@ -24,15 +26,22 @@ func HeaderBinding(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
 		if r.Method == "POST" {
-			if r.Header.Get("Content-Type") != "application/json" {
-				_ = json.NewEncoder(w).Encode(ErrorResponse{
-					"Wrong Content-Type in POST request. application/json expected",
-				})
+			if r.Header.Get("Content-Type") != jsonBody {
+				Response{
+					Success: false,
+					Code:    1000,
+					Message: "Wrong Content-Type in POST request. application/json expected",
+				}.JSON(w, 400)
 				return
 			}
 		}
 
-		w.Header().Set("Content-Type", "application/json")
+		if r.Header.Get("Accept") == jsonBody {
+			w.Header().Set("Content-Type", jsonBody)
+		} else {
+			w.Header().Set("Content-Type", htmlBody)
+		}
+
 		next.ServeHTTP(w, r)
 	})
 }
