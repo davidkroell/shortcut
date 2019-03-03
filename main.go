@@ -12,6 +12,7 @@ import (
 
 var isMigrate = flag.Bool("migrate", false, "Migrate the database")
 var isFresh = flag.Bool("fresh", false, "Recreate tables if they exist")
+var seedFile = flag.String("seed", "", "Seed the database with a given SQL file")
 
 func main() {
 	flag.Parse()
@@ -33,7 +34,9 @@ func main() {
 
 	if *isMigrate {
 		db.Migrate(*isFresh)
-		return
+	}
+	if *seedFile != "" {
+		db.Seed(*seedFile)
 	}
 
 	router := routes.InitRouter()

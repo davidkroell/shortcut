@@ -1,6 +1,14 @@
 package models
 
-import "log"
+import (
+	"bufio"
+	"fmt"
+	"io"
+	"log"
+	"os"
+	"path/filepath"
+	"time"
+)
 
 const (
 	createUsersTable string = `CREATE TABLE Users
@@ -88,4 +96,47 @@ func (db *Database) Migrate(dropTables bool) {
 	}
 
 	log.Println("Created shortcuts log table")
+}
+
+func (db *Database) Seed(path string) {
+	log.Printf("Seeding database with file %s", path)
+	absPath, _ := filepath.Abs(path)
+
+	file, err := os.Open(absPath)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	closer := make(chan struct{})
+	var counter int
+
+	go func() {
+		for {
+			select {
+			case <-time.Tick(500 * time.Millisecond):
+				fmt.Print(".")
+			case <-closer:
+				fmt.Printf("\n")
+				log.Printf("Seeding finished. %d SQL statements executed\n", counter)
+				return
+			}
+		}
+	}()
+
+	scanner := bufio.NewReader(file)
+	for {
+		stmt, err := scanner.ReadString(';')
+		if err == io.EOF {
+			break
+		} else if err != nil {
+			log.Fatal(err)
+		}
+		_, err = db.Exec(stmt)
+		if err != nil {
+			log.Println(err)
+		}
+		counter++
+	}
+
+	closer <- struct{}{}
 }
