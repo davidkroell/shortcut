@@ -20,6 +20,7 @@ type Shortcut struct {
 
 const (
 	selectShortcut      = `SELECT * FROM Shortcuts WHERE %s = ?;`
+	selectShortcuts     = `SELECT * FROM Shortcuts LIMIT ?, ?;`
 	loadRelatedShortcut = `SELECT * FROM Users WHERE ID = ?;`
 	insertShortcut      = `INSERT INTO Shortcuts (ID, ShortIdentifier, RedirectURL, RedirectStatus, CreatedAt, UpdatedAt, ValidThru, UserID) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, ?, ?);`
 	updateshortcut      = `UPDATE Shortcuts
@@ -44,6 +45,25 @@ func ShortcutBy(matcher ColumnMatcher, value string) (*Shortcut, error) {
 	}
 
 	return s, nil
+}
+
+func Shortcuts(page, perPage int) (slist []Shortcut, err error) {
+	result, err := db.Query(selectShortcuts, page*perPage, perPage)
+	if err != nil {
+		return nil, err
+	}
+
+	for result.Next() {
+		s := Shortcut{}
+
+		err := result.Scan(&s.ID, &s.ShortIdentifer, &s.RedirectURL, &s.RedirectStatus, &s.CreatedAt, &s.UpdatedAt, &s.ValidThru, &s.userID)
+		if err != nil {
+			return nil, err
+		}
+
+		slist = append(slist, s)
+	}
+	return slist, nil
 }
 
 func (s *Shortcut) LoadRelated() (err error) {

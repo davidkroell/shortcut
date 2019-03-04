@@ -5,6 +5,7 @@ import (
 	"github.com/davidkroell/shortcut/models"
 	"github.com/gorilla/mux"
 	"net/http"
+	"strconv"
 )
 
 func createShortcut(w http.ResponseWriter, r *http.Request) {
@@ -35,7 +36,33 @@ func createShortcut(w http.ResponseWriter, r *http.Request) {
 }
 
 func listShortcuts(w http.ResponseWriter, r *http.Request) {
+	pageStr := "0"
+	urlArray, ok := r.URL.Query()["page"]
+	if ok {
+		pageStr = urlArray[0]
+	}
 
+	page, err := strconv.Atoi(pageStr)
+	if err != nil {
+		Response{
+			Success: false,
+			Code:    1007,
+			Message: "Malformed URL. page must be int value",
+		}.JSON(w, 400)
+		return
+	}
+
+	shortcuts, err := models.Shortcuts(page, 20)
+	if err != nil {
+		Response{
+			Success: false,
+			Code:    1004,
+			Message: "Internal server error. " + err.Error(),
+		}.JSON(w, 500)
+		return
+	}
+
+	_ = json.NewEncoder(w).Encode(shortcuts)
 }
 
 func getShortcut(w http.ResponseWriter, r *http.Request) {
