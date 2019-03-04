@@ -3,6 +3,7 @@ package models
 import (
 	"database/sql"
 	"errors"
+	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
 	"sync"
@@ -20,7 +21,6 @@ type Relateable interface {
 
 type DBModel interface {
 	Save() (err error)
-	Delete() (err error)
 	SetID(id string)
 }
 
@@ -42,11 +42,14 @@ type Database struct {
 	*sql.DB
 }
 
-type MatchingField string
+type Matcher string
+type ColumnMatcher Matcher
 
 const (
-	ID              MatchingField = "ID"
-	ShortIdentifier MatchingField = "ShortIdentifier"
+	ID              ColumnMatcher = "ID"
+	ShortIdentifier ColumnMatcher = "ShortIdentifier"
+	TableUsers      Matcher       = "Users"
+	TableShortcuts  Matcher       = "Shortcuts"
 )
 
 func InitDatabase(config DBConfig) *Database {
@@ -74,4 +77,13 @@ func InitDatabase(config DBConfig) *Database {
 	})
 
 	return &db
+}
+
+const (
+	deleteFrom string = `DELETE FROM %s WHERE %s = ?;`
+)
+
+func DeleteFrom(tableMatcher Matcher, columMatcher ColumnMatcher, value string) error {
+	_, err := db.Exec(fmt.Sprintf(deleteFrom, tableMatcher, columMatcher), value)
+	return err
 }

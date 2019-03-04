@@ -30,7 +30,7 @@ SET ShortIdentifier = ?,
 WHERE ID = ?;`
 )
 
-func ShortcutBy(matcher MatchingField, value string) (*Shortcut, error) {
+func ShortcutBy(matcher ColumnMatcher, value string) (*Shortcut, error) {
 	s := &Shortcut{}
 
 	// make sure user cannot parse matcher by malformed input
@@ -82,8 +82,4 @@ func (s *Shortcut) create() error {
 func (s *Shortcut) update() error {
 	_, err := db.Exec(updateshortcut, s.ShortIdentifer, s.RedirectURL, s.RedirectStatus, s.ValidThru, s.ID)
 	return err
-}
-
-func (s *Shortcut) Delete() (err error) {
-	panic("implement me")
 }

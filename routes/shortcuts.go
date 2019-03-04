@@ -112,7 +112,22 @@ func updateShortcut(w http.ResponseWriter, r *http.Request) {
 }
 
 func deleteShortcut(w http.ResponseWriter, r *http.Request) {
+	id := mux.Vars(r)["id"]
 
+	err := models.DeleteFrom(models.TableShortcuts, models.ID, id)
+	if err != nil {
+		Response{
+			Success: false,
+			Code:    1006,
+			Message: "Failed to delete " + id,
+		}.JSON(w, 400)
+		return
+	}
+
+	Response{
+		Success: true,
+		Message: "deleted",
+	}.JSON(w, 200)
 }
 
 func forwardShortcut(w http.ResponseWriter, r *http.Request) {

@@ -28,3 +28,8 @@ Accept: application/json
 }
 
 ###
+
+DELETE http://localhost:9999/api/shortcuts/011c7aa1-89e5-4a1a-97af-b73ed18c5a29
+Accept: application/json
+
+###
