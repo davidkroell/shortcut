@@ -116,7 +116,7 @@ func (db *Database) Seed(path string) {
 			case <-time.Tick(500 * time.Millisecond):
 				fmt.Print(".")
 			case <-closer:
-				fmt.Printf("\n")
+				fmt.Println("\n")
 				log.Printf("Seeding finished. %d SQL statements executed\n", counter)
 				return
 			}

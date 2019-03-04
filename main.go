@@ -11,8 +11,9 @@ import (
 )
 
 var isMigrate = flag.Bool("migrate", false, "Migrate the database")
-var isFresh = flag.Bool("fresh", false, "Recreate tables if they exist")
+var isFresh = flag.Bool("fresh", false, "Recreate tables if they exist. Only in combination with -migrate")
 var seedFile = flag.String("seed", "", "Seed the database with a given SQL file")
+var serve = flag.Bool("serve", false, "Start the HTTP server and listen for requests")
 
 func main() {
 	flag.Parse()
@@ -39,6 +40,11 @@ func main() {
 		db.Seed(*seedFile)
 	}
 
-	router := routes.InitRouter()
-	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), &router))
+	if *serve {
+		log.Println("Starting HTTP Server")
+		router := routes.InitRouter()
+		log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), &router))
+	} else if !*isMigrate && !*isFresh && *seedFile == "" {
+		flag.Usage()
+	}
 }
