@@ -1,13 +1,33 @@
 package routes
 
-import "net/http"
+import (
+	"encoding/json"
+	"github.com/davidkroell/shortcut/models"
+	"net/http"
+)
 
 func registerUser(w http.ResponseWriter, r *http.Request) {
 
 }
 
 func loginUser(w http.ResponseWriter, r *http.Request) {
+	req := authRequest{}
 
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		responseMalformedBody.JSON(w, http.StatusBadRequest)
+	}
+
+	u, err := models.AuthUser(req.Email, req.Password)
+	if err == nil {
+		// auth successful
+		token, _ := u.JWT()
+		resp := map[string]interface{}{"success": true, "jwt": token}
+
+		ArbitraryJSON(w, resp, http.StatusOK)
+		return
+	} else if err == models.ErrCredentialMismatch {
+		responseCredentialMismath.JSON(w, http.StatusBadRequest)
+	}
 }
 
 func getUser(w http.ResponseWriter, r *http.Request) {

@@ -434,7 +434,8 @@ insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedA
 values ('389f364d-f24f-4c87-ab06-fee0c96064d3', 'ebugge40@xrea.com', 'Eveline', 'Bugge', 'cYJLkb0t0',
         '2018-12-11 00:17:49', '2019-05-04 09:37:21', '2020-09-27 02:08:16');
 insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
-values ('00366fb9-cd76-47e0-b3c6-cbd611650d9e', 'hmersh41@dell.com', 'Hortense', 'Mersh', '40EZ14Q2ns',
+values ('00366fb9-cd76-47e0-b3c6-cbd611650d9e', 'hmersh41@dell.com', 'Hortense', 'Mersh',
+        '$2y$12$tShEMkzDjNDMaquL40hTq.tAfhWEf84OypeotqvIn1vpGO9J.MmA.',
         '2018-05-30 08:51:24', '2019-09-28 11:54:41', '2020-01-26 18:07:17');
 insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
 values ('dbee8ed6-1f0a-4dff-88d2-d0594af80da8', 'wmcgowran42@plala.or.jp', 'Welsh', 'McGowran', 'HF8kVglzsb',

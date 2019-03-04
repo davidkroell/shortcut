@@ -15,6 +15,7 @@ var singleton sync.Once
 
 // ErrNotFound is an error, which is raised if no database entries are found
 var ErrNotFound = errors.New("not found")
+var ErrCredentialMismatch = errors.New("credentials do not match a user")
 
 type Relateable interface {
 	LoadRelated() (err error)
@@ -56,6 +57,7 @@ type ColumnMatcher Matcher
 const (
 	ID              ColumnMatcher = "ID"
 	ShortIdentifier ColumnMatcher = "ShortIdentifier"
+	Email           ColumnMatcher = "Email"
 	TableUsers      Matcher       = "Users"
 	TableShortcuts  Matcher       = "Shortcuts"
 )
