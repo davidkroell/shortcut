@@ -5,7 +5,6 @@ import (
 )
 
 const (
-	getUUID               string = `SELECT UUID()`
 	insertUser            string = `INSERT INTO Users (ID, Email, Firstname, Lastname, Password) VALUES (?, ?, ?, ?, ?);`
 	selectUserById        string = `SELECT * FROM Users WHERE ID = ?;`
 	selectUserLimitOffset string = `SELECT * FROM Users LIMIT ?, ?;`
@@ -22,6 +21,10 @@ type User struct {
 	LastLogin time.Time
 }
 
+func (u *User) SetID(id string) {
+	u.ID = id
+}
+
 func (u *User) Save() error {
 	if u.ID == "" {
 		return u.create()
@@ -30,15 +33,11 @@ func (u *User) Save() error {
 }
 
 func (u *User) create() error {
-	result, err := db.Query(getUUID)
-	if err != nil {
-		return err
-	}
-	if err := result.Scan(&u.ID); err != nil {
+	if err := setUUIDAsID(u); err != nil {
 		return err
 	}
 
-	_, err = db.Exec(insertUser, u.ID, u.Email, u.Firstname, u.LastLogin, u.Password)
+	_, err := db.Exec(insertUser, u.ID, u.Email, u.Firstname, u.LastLogin, u.Password)
 	return err
 }
 

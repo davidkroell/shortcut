@@ -41,7 +41,7 @@ func main() {
 	}
 
 	if *serve {
-		log.Println("Starting HTTP Server")
+		log.Println("HTTP Server listening on port " + os.Getenv("PORT"))
 		router := routes.InitRouter()
 		log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), &router))
 	} else if !*isMigrate && !*isFresh && *seedFile == "" {

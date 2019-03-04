@@ -1,0 +1,12 @@
+POST http://localhost:9999/api/shortcuts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "shortIdentifier": "htl2",
+  "redirectURL": "http://htl-villach.at",
+  "redirectStatus": 301,
+  "validThru": "2019-04-01T08:00:00.000+01:00"
+}
+
+###

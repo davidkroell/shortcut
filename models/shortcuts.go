@@ -7,20 +7,27 @@ import (
 )
 
 type Shortcut struct {
-	ID             string
-	ShortIdentifer string
-	RedirectURL    string
-	RedirectStatus int
-	CreatedAt      time.Time
-	UpdatedAt      time.Time
-	ValidThru      time.Time
-	User           *User
+	ID             string    `json:"id"`
+	ShortIdentifer string    `json:"shortIdentifier"`
+	RedirectURL    string    `json:"redirectURL"`
+	RedirectStatus int       `json:"redirectStatus"`
+	CreatedAt      time.Time `json:"createdAt"`
+	UpdatedAt      time.Time `json:"updatedAt"`
+	ValidThru      time.Time `json:"validThru"`
+	User           *User     `json:"user"`
 	userID         string
 }
 
 const (
-	selectShortcut      string = `SELECT * FROM Shortcuts WHERE %s = ?;`
-	loadRelatedShortcut string = `SELECT * FROM Users WHERE ID = ?;`
+	selectShortcut      = `SELECT * FROM Shortcuts WHERE %s = ?;`
+	loadRelatedShortcut = `SELECT * FROM Users WHERE ID = ?;`
+	insertShortcut      = `INSERT INTO Shortcuts (ID, ShortIdentifier, RedirectURL, RedirectStatus, CreatedAt, UpdatedAt, ValidThru, UserID) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, ?, ?);`
+	updateshortcut      = `UPDATE Shortcuts
+SET ShortIdentifier = ?
+  AND RedirectURL = ?
+  AND RedirectStatus = ?
+  AND ValidThru = ?
+WHERE ID = ?;`
 )
 
 func ShortcutBy(matcher MatchingField, value string) (*Shortcut, error) {
@@ -47,4 +54,36 @@ func (s *Shortcut) LoadRelated() (err error) {
 	}
 
 	return nil
+}
+
+func (s *Shortcut) SetID(id string) {
+	s.ID = id
+}
+
+func (s *Shortcut) Save() error {
+	if s.ID == "" {
+		return s.create()
+	}
+	return s.update()
+}
+
+func (s *Shortcut) create() error {
+	if err := setUUIDAsID(s); err != nil {
+		return err
+	}
+
+	// TODO remove
+	s.userID = "00366fb9-cd76-47e0-b3c6-cbd611650d9e"
+
+	_, err := db.Exec(insertShortcut, s.ID, s.ShortIdentifer, s.RedirectURL, s.RedirectStatus, s.ValidThru, s.userID)
+	return err
+}
+
+func (s *Shortcut) update() error {
+	_, err := db.Exec(updateshortcut, s.ShortIdentifer, s.RedirectURL, s.RedirectStatus, s.ValidThru, s.ID)
+	return err
+}
+
+func (s *Shortcut) Delete() (err error) {
+	panic("implement me")
 }

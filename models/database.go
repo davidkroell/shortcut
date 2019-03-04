@@ -21,6 +21,17 @@ type Relateable interface {
 type DBModel interface {
 	Save() (err error)
 	Delete() (err error)
+	SetID(id string)
+}
+
+func setUUIDAsID(m DBModel) error {
+	row := db.QueryRow("SELECT UUID();")
+	var id string
+	if err := row.Scan(&id); err != nil {
+		return err
+	}
+	m.SetID(id)
+	return nil
 }
 
 type DBConfig struct {
