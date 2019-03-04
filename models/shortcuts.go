@@ -23,10 +23,10 @@ const (
 	loadRelatedShortcut = `SELECT * FROM Users WHERE ID = ?;`
 	insertShortcut      = `INSERT INTO Shortcuts (ID, ShortIdentifier, RedirectURL, RedirectStatus, CreatedAt, UpdatedAt, ValidThru, UserID) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, ?, ?);`
 	updateshortcut      = `UPDATE Shortcuts
-SET ShortIdentifier = ?
-  AND RedirectURL = ?
-  AND RedirectStatus = ?
-  AND ValidThru = ?
+SET ShortIdentifier = ?,
+    RedirectURL     = ?,
+    RedirectStatus  = ?,
+    ValidThru       = ?
 WHERE ID = ?;`
 )
 

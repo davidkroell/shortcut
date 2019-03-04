@@ -46,7 +46,7 @@ func getShortcut(w http.ResponseWriter, r *http.Request) {
 	if err != nil && err != models.ErrNotFound {
 		Response{
 			Success: false,
-			Code:    1005,
+			Code:    1001,
 			Message: "Bad Request. " + err.Error(),
 		}.JSON(w, 400)
 		return
@@ -62,7 +62,53 @@ func getShortcut(w http.ResponseWriter, r *http.Request) {
 }
 
 func updateShortcut(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	id := vars["id"]
 
+	fromDb, err := models.ShortcutBy(models.ID, id)
+	if err != nil && err != models.ErrNotFound {
+		Response{
+			Success: false,
+			Code:    1001,
+			Message: "Bad Request. " + err.Error(),
+		}.JSON(w, 400)
+		return
+	} else if err == models.ErrNotFound {
+		Response{
+			Success: false,
+			Code:    1002,
+			Message: id + " not found",
+		}.JSON(w, 404)
+		return
+	}
+
+	fromReq := models.Shortcut{}
+	if err := json.NewDecoder(r.Body).Decode(&fromReq); err != nil {
+		Response{
+			Success: false,
+			Code:    1003,
+			Message: "Malformed JSON body",
+		}.JSON(w, 400)
+		return
+	}
+	fromDb.ValidThru = fromReq.ValidThru
+	fromDb.RedirectURL = fromReq.RedirectURL
+	fromDb.RedirectStatus = fromReq.RedirectStatus
+	fromDb.ShortIdentifer = fromReq.ShortIdentifer
+
+	if err := fromDb.Save(); err != nil {
+		Response{
+			Success: false,
+			Code:    1005,
+			Message: "could not update. " + err.Error(),
+		}.JSON(w, 400)
+		return
+	}
+
+	Response{
+		Success: true,
+		Message: "updated",
+	}.JSON(w, 200)
 }
 
 func deleteShortcut(w http.ResponseWriter, r *http.Request) {

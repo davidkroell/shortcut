@@ -15,3 +15,16 @@ GET http://localhost:9999/api/shortcuts/011c7aa1-89e5-4a1a-97af-b73ed18c5a29
 Accept: application/json
 
 ###
+
+PUT http://localhost:9999/api/shortcuts/011c7aa1-89e5-4a1a-97af-b73ed18c5a29
+Content-Type: application/json
+Accept: application/json
+
+{
+  "shortIdentifier": "htl34",
+  "redirectURL": "http://htl-villach.at",
+  "redirectStatus": 302,
+  "validThru": "2027-04-01T08:00:00.000+01:00"
+}
+
+###
