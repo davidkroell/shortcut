@@ -16,6 +16,8 @@ var shortcutNotFound = *template.Must(template.New("shortcutNotFound").Parse(`<h
 </body>
 </html>`))
 
+// HTML Renders a given template and sends it to the http.ResponseWriter.
+// Sets the given HTTP Statuscode
 func (r Response) HTML(w http.ResponseWriter, statusCode int, tmpl template.Template) {
 	w.WriteHeader(statusCode)
 

@@ -13,12 +13,14 @@ import (
 var db Database
 var singleton sync.Once
 
+// ErrNotFound is an error, which is raised if no database entries are found
 var ErrNotFound = errors.New("not found")
 
 type Relateable interface {
 	LoadRelated() (err error)
 }
 
+// DBModel eases the handling of database-related structs
 type DBModel interface {
 	Save() (err error)
 	SetID(id string)
@@ -34,15 +36,21 @@ func setUUIDAsID(m DBModel) error {
 	return nil
 }
 
+// DBConfig
 type DBConfig struct {
 	Driver, Username, Password, Host, Name string
 }
 
+// Database is a struct wrapper for *sql.DB
 type Database struct {
 	*sql.DB
 }
 
+// Matcher simplifies the handling of similar database queries.
+// The different type makes it safe to use this with string formatting to set column and table without prepared statements
 type Matcher string
+
+// ColumnMatcher is a more specific Matcher at column-based use-cases
 type ColumnMatcher Matcher
 
 const (
@@ -52,6 +60,7 @@ const (
 	TableShortcuts  Matcher       = "Shortcuts"
 )
 
+// Makes sure the database is only initialized once
 func InitDatabase(config DBConfig) *Database {
 	// make sure this code only gets executed once
 	singleton.Do(func() {
@@ -83,7 +92,8 @@ const (
 	deleteFrom string = `DELETE FROM %s WHERE %s = ?;`
 )
 
-func DeleteFrom(tableMatcher Matcher, columMatcher ColumnMatcher, value string) error {
-	_, err := db.Exec(fmt.Sprintf(deleteFrom, tableMatcher, columMatcher), value)
+// DeleteFrom
+func DeleteFrom(tableMatcher Matcher, columnMatcher ColumnMatcher, value string) error {
+	_, err := db.Exec(fmt.Sprintf(deleteFrom, tableMatcher, columnMatcher), value)
 	return err
 }
