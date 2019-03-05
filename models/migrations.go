@@ -17,7 +17,7 @@ const (
   Email     CHAR(50)    NOT NULL UNIQUE,
   Firstname VARCHAR(50) NOT NULL,
   Lastname  VARCHAR(50) NOT NULL,
-  Password  BINARY(60)  NOT NULL,
+  PasswordHash  BINARY(60)  NOT NULL,
   CreatedAt DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP,
   UpdatedAt DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   LastLogin DATETIME,
@@ -116,9 +116,8 @@ func (db *Database) Seed(path string) {
 			case <-time.Tick(500 * time.Millisecond):
 				fmt.Print(".")
 			case <-closer:
-				fmt.Println("\n")
 				log.Printf("Seeding finished. %d SQL statements executed\n", counter)
-				return
+				closer <- struct{}{}
 			}
 		}
 	}()
@@ -139,4 +138,5 @@ func (db *Database) Seed(path string) {
 	}
 
 	closer <- struct{}{}
+	<-closer
 }

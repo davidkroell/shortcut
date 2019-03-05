@@ -1,8 +1,11 @@
 package routes
 
 import (
+	"context"
+	"github.com/davidkroell/shortcut/models"
 	"log"
 	"net/http"
+	"strings"
 )
 
 var jsonBody = "application/json"
@@ -49,8 +52,21 @@ func HeaderBinding(next http.Handler) http.Handler {
 // Authentication
 func Authentication(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		header := r.Header.Get("Authorization")
+		headerParts := strings.Split(header, "Bearer ")
+		if len(headerParts) < 2 {
+			responseMalformedJWT.JSON(w, http.StatusBadRequest)
+			return
+		}
 
-		// TODO implement
-		next.ServeHTTP(w, r)
+		u, err := models.UserJWT(headerParts[1])
+		if err != nil {
+			log.Println(err)
+			responseUnauthorized.JSON(w, http.StatusUnauthorized)
+			return
+		}
+
+		ctx := context.WithValue(r.Context(), "User", &u)
+		next.ServeHTTP(w, r.WithContext(ctx))
 	})
 }

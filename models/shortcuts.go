@@ -19,7 +19,7 @@ type Shortcut struct {
 }
 
 const (
-	selectShortcut      = `SELECT * FROM Shortcuts WHERE %s = ?;`
+	selectShortcutBy    = `SELECT * FROM Shortcuts WHERE %s = ?;`
 	selectShortcuts     = `SELECT * FROM Shortcuts LIMIT ?, ?;`
 	loadRelatedShortcut = `SELECT * FROM Users WHERE ID = ?;`
 	insertShortcut      = `INSERT INTO Shortcuts (ID, ShortIdentifier, RedirectURL, RedirectStatus, CreatedAt, UpdatedAt, ValidThru, UserID) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, ?, ?);`
@@ -35,7 +35,7 @@ func ShortcutBy(matcher ColumnMatcher, value string) (*Shortcut, error) {
 	s := &Shortcut{}
 
 	// make sure user cannot parse matcher by malformed input
-	row := db.QueryRow(fmt.Sprintf(selectShortcut, matcher), value)
+	row := db.QueryRow(fmt.Sprintf(selectShortcutBy, matcher), value)
 	err := row.Scan(&s.ID, &s.ShortIdentifer, &s.RedirectURL, &s.RedirectStatus, &s.CreatedAt, &s.UpdatedAt, &s.ValidThru, &s.userID)
 
 	if err != nil && err != sql.ErrNoRows {
@@ -69,7 +69,7 @@ func Shortcuts(page, perPage int) (slist []Shortcut, err error) {
 func (s *Shortcut) LoadRelated() (err error) {
 	result := db.QueryRow(loadRelatedShortcut, s.userID)
 
-	if err := result.Scan(s.User.ID, s.User.Email, s.User.Firstname, s.User.Lastname, s.User.Password, s.User.CreatedAt, s.User.UpdatedAt, s.User.LastLogin); err != nil {
+	if err := result.Scan(s.User.ID, s.User.Email, s.User.Firstname, s.User.Lastname, s.User.PasswordHash, s.User.CreatedAt, s.User.UpdatedAt, s.User.LastLogin); err != nil {
 		return err
 	}
 

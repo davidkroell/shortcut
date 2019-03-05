@@ -17,7 +17,7 @@ func loginUser(w http.ResponseWriter, r *http.Request) {
 		responseMalformedBody.JSON(w, http.StatusBadRequest)
 	}
 
-	u, err := models.AuthUser(req.Email, req.Password)
+	u, err := models.UserAuth(req.Email, req.Password)
 	if err == nil {
 		// auth successful
 		token, _ := u.JWT()

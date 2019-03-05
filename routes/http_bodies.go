@@ -19,10 +19,22 @@ var responseMalformedBody = Response{
 	Message: "Malformed JSON body",
 }
 
+var responseMalformedJWT = Response{
+	Success: false,
+	Code:    1009,
+	Message: "Malformed Authorization header",
+}
+
 var responseCredentialMismath = Response{
 	Success: false,
 	Code:    1008,
 	Message: "Credentials do not match. Please try again",
+}
+
+var responseUnauthorized = Response{
+	Success: false,
+	Code:    1010,
+	Message: "Unauthorized",
 }
 
 // JSON marshals the Response struct to a JSON string and sets the HTTP Statuscode

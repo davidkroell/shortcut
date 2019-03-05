@@ -1,602 +1,602 @@
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a511bc55-a2b3-4a8b-814c-fb894464869c', 'evonoertzen0@go.com', 'Edie', 'Von Oertzen', 'wk0FFx',
         '2018-08-18 16:05:17', '2019-11-30 01:15:54', '2020-04-10 01:37:50');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f30b4afb-810c-49e7-a321-a6b843fa0639', 'cstaintonskinn1@1688.com', 'Chan', 'Stainton - Skinn', 'i2IIZI',
         '2018-10-31 02:06:05', '2019-03-13 22:21:46', '2020-10-16 08:03:18');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3ed80568-3e8a-454b-aeff-68cd4efa3ab9', 'sbrilon2@adobe.com', 'Shanon', 'Brilon', 'JkpnNcPM',
         '2018-05-14 02:39:20', '2019-12-11 01:50:07', '2020-05-27 04:22:28');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
-values ('ab22a2db-32f9-4a3f-9bba-8005e8824aa0', 'aabbets3@soundcloud.com', 'Alexa', 'Abbets', 'OWGVLUm',
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
+values ('38abad35-cd76-47e0-b3c6-deadbeef0d9e', 'aabbets3@soundcloud.com', 'Alexa', 'Abbets', 'OWGVLUm',
         '2018-12-08 13:49:13', '2019-08-08 04:55:14', '2020-06-02 07:01:11');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2a9dff59-c676-465b-9e05-ff9582e869c2', 'gtisun4@gnu.org', 'Georgina', 'Tisun', 'Bunnnv', '2018-03-20 00:31:53',
         '2019-08-11 04:48:05', '2020-04-27 18:28:09');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('cd95f934-0080-4e12-a51e-3de4b3d8642a', 'bscoffham5@woothemes.com', 'Beauregard', 'Scoffham', 'FNEpOoZYZZ',
         '2018-05-05 22:32:57', '2019-02-06 18:25:33', '2020-05-31 08:27:01');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('784941a3-4f0e-46c4-9580-03d92e8381f1', 'bchevins6@buzzfeed.com', 'Bunnie', 'Chevins', 'aZqGIr5',
         '2018-07-25 05:25:52', '2019-06-02 03:00:09', '2020-07-28 09:05:22');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('966a632c-58c2-4785-8eb2-1966e091a78e', 'jmcgaffey7@hp.com', 'Jasmina', 'McGaffey', 'wA07qhH1G3',
         '2018-08-21 18:35:41', '2019-06-22 05:00:11', '2020-03-19 12:22:59');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('9572ac40-944d-4615-b923-5ea01cfd1b59', 'cdartnall8@economist.com', 'Catharine', 'Dartnall', 'nzUINCBrrH5',
         '2018-02-07 19:50:07', '2019-11-29 07:59:08', '2020-06-09 12:18:44');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('72cb27f1-66c1-4a6e-9ee5-dd388dc515b1', 'kspringell9@ustream.tv', 'Kerrie', 'Springell', 'cZupr0MuklqF',
         '2018-02-02 11:25:14', '2019-07-07 10:25:16', '2020-06-30 06:23:21');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('6c9c2975-dbbd-4ff6-92cd-0bcc03d0afa8', 'bluppitta@devhub.com', 'Breanne', 'Luppitt', 'NYHHcYuG',
         '2018-07-30 09:51:42', '2019-12-22 08:29:20', '2020-11-19 02:57:52');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('e899a348-b7fe-4912-80c1-0e10e27adc45', 'mglasonb@paginegialle.it', 'Mariya', 'Glason', 'sayzMqSSGyke',
         '2018-08-20 01:49:58', '2019-10-30 02:19:01', '2020-06-23 15:32:52');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('16c094ad-ed1d-4e51-bd61-5685e37416b6', 'pleggottc@flavors.me', 'Perri', 'Leggott', 'i2jCVa1so',
         '2018-06-20 01:19:41', '2019-02-18 13:39:04', '2020-06-08 11:23:11');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('6fe583c4-34f2-4a6d-96a2-9f399456ddce', 'bmcconneld@ed.gov', 'Billy', 'McConnel', '5yCFOIrbanIT',
         '2018-10-15 02:04:57', '2019-11-25 06:39:28', '2020-03-30 20:52:06');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a92e273f-2089-4e4e-baf1-4594e40ddb10', 'kchablee@sun.com', 'Kerry', 'Chable', 'lcQ1Dx1', '2018-07-01 01:19:05',
         '2019-01-26 02:49:06', '2020-11-23 10:42:14');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('df2bac5e-d273-4448-81f9-231c2d374204', 'gflyef@icio.us', 'Gipsy', 'Flye', 'VXdBrcL8jWG3',
         '2018-12-13 05:17:26', '2019-11-20 13:48:46', '2020-11-21 08:37:49');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3a909b94-f3e1-4ef0-8b90-5143141cd1e2', 'gruzickag@oaic.gov.au', 'Ginny', 'Ruzicka', 'l40Gn3E',
         '2018-09-03 05:03:19', '2019-06-08 17:38:53', '2020-07-06 21:33:59');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f222c9ad-615f-47e7-b24a-fb61f3900a52', 'molyonovh@soundcloud.com', 'Maximilian', 'Olyonov', '85kp3GI1E',
         '2018-03-01 20:47:10', '2019-10-09 04:16:35', '2020-05-14 10:54:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3110f4f5-3ee5-46aa-ba25-c8c643ae0b6b', 'kmillmorei@surveymonkey.com', 'Katey', 'Millmore', 'pemnLrRfay',
         '2018-02-15 05:04:09', '2019-01-01 19:49:23', '2020-02-24 15:19:41');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('39420d50-330d-41f1-a8c9-736ec8cb6db2', 'glohdenj@e-recht24.de', 'Gunther', 'Lohden', 'SM1DU01TY3',
         '2018-11-09 21:57:01', '2019-01-06 08:08:57', '2020-08-25 06:47:39');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('da0b697a-1663-45ce-98e8-893877a10b82', 'gbonehillk@vistaprint.com', 'Gladys', 'Bonehill', '9YMz0QdQ',
         '2018-11-26 00:52:51', '2019-04-16 10:17:15', '2020-11-16 09:05:15');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('452a283a-960f-4ef9-8680-31f5eb8168d5', 'krotgel@myspace.com', 'Kippie', 'Rotge', 'CwkCso4SmM',
         '2018-02-10 03:58:26', '2019-04-16 05:43:32', '2020-04-12 05:41:37');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('08661e5c-041f-40e4-9918-29ccdfd7b34c', 'mpetrelluzzim@nature.com', 'Mano', 'Petrelluzzi', 'SHK8Yl',
         '2018-12-15 13:53:03', '2019-06-13 04:02:44', '2020-07-23 19:07:57');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a0ef66be-0c9e-409f-bd1a-e3b6f34f665a', 'smenauln@cam.ac.uk', 'Stephanus', 'Menaul', 'IYdsH9x2cT',
         '2018-02-17 11:24:42', '2019-05-01 19:14:54', '2020-11-15 19:21:34');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('b2e76fcc-c569-4b1a-b617-536a2c6e28c1', 'cendricio@answers.com', 'Corbie', 'Endrici', 'ID9W62dqa67',
         '2018-11-19 06:43:28', '2019-01-08 15:05:12', '2020-07-10 15:26:51');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('b3ea3514-b9ed-41d4-8031-aa6a2dfb6561', 'opinchenp@over-blog.com', 'Olav', 'Pinchen', 'Ib7evsN',
         '2018-05-11 05:49:47', '2019-05-25 12:44:39', '2020-05-24 22:34:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('d6dbf9d3-3f3f-4a27-a8be-8ad5a5595264', 'santenq@reuters.com', 'Stavros', 'Anten', '1kRHgd4',
         '2018-09-19 11:24:48', '2019-07-28 14:51:33', '2020-07-15 17:38:53');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('766bb608-63f1-4b68-b97f-3875f3d81e2b', 'obartoszewiczr@unc.edu', 'Olia', 'Bartoszewicz', 'Jc2DLxamlyk6',
         '2018-01-14 13:18:21', '2019-07-08 12:13:16', '2020-01-06 17:58:32');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f9d81f58-35af-4cbf-aad3-46237d32247b', 'sloftuss@army.mil', 'Stacy', 'Loftus', '0HPCZlv87kE9',
         '2018-12-18 21:11:03', '2019-07-26 16:12:32', '2020-05-17 11:55:13');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('4847a4ef-824b-4e65-9a70-4d93a10101fe', 'eocannavant@gmpg.org', 'Emelyne', 'O''Cannavan', 'FNsWytitj45H',
         '2018-08-06 06:00:43', '2019-08-04 01:04:18', '2020-08-22 14:23:11');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('86f734a7-7cb5-46ed-a509-181ed6489db6', 'pwillsonu@nifty.com', 'Piotr', 'Willson', 'Rbf0u8bQ',
         '2018-12-03 13:30:14', '2019-05-29 12:05:21', '2020-08-20 18:19:35');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a907b3c7-67ef-4a2a-abed-52c52e326564', 'lknealev@purevolume.com', 'Laure', 'Kneale', 'TlXIeUAKMX',
         '2018-10-21 17:12:30', '2019-07-01 23:58:30', '2020-03-17 00:43:07');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('99e4abc4-ad28-4276-8083-af78f3d4b446', 'jcapellw@dagondesign.com', 'Joyce', 'Capell', 'wFlYM0VpGT5C',
         '2018-01-26 04:38:26', '2019-07-10 10:37:11', '2020-07-29 15:18:27');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('d8e85495-ed84-49ab-9420-1b1f90c712fb', 'jkeachx@ted.com', 'Jenelle', 'Keach', 'qhNKry', '2018-10-19 20:02:51',
         '2019-12-04 22:54:33', '2020-07-26 18:42:25');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('d33c3265-fbf3-4891-baaf-cb623bb85973', 'tturnelly@economist.com', 'Tiffy', 'Turnell', 'giUb5ak',
         '2018-04-02 05:32:29', '2019-11-04 21:50:02', '2020-12-23 20:13:24');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('c3e4d2da-e40a-48e4-9f0d-111ac80e84f2', 'aoliphardz@npr.org', 'Annaliese', 'Oliphard', 'eKn3oRo4',
         '2018-05-02 16:19:14', '2019-09-04 18:40:22', '2020-11-17 10:26:01');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('79632cd0-4c66-44a8-a5cf-42a6fd7b037f', 'kinfantino10@usgs.gov', 'Kerwin', 'Infantino', '4Pj6sD9',
         '2018-10-16 13:50:43', '2019-10-30 11:54:14', '2020-02-02 11:25:09');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('1c44e1b3-e5a8-41aa-a115-20a568d85369', 'cabrami11@list-manage.com', 'Clem', 'Abrami', 'GzQqmcrJgiYm',
         '2018-06-02 22:36:42', '2019-09-23 02:12:22', '2020-11-15 12:24:53');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2dd1bf71-b81d-4776-8728-eec92379ec68', 'byounger12@gov.uk', 'Bradan', 'Younger', 'OmBdiWtnTSE8',
         '2018-04-19 14:32:00', '2019-11-13 03:40:41', '2020-05-19 06:19:08');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('e4e815db-a348-4ff3-8908-bbb38b108df9', 'cmeakin13@salon.com', 'Cathrin', 'Meakin', '2zBNNHUVgON',
         '2018-09-19 14:22:00', '2019-12-07 02:41:43', '2020-06-29 01:42:26');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('694841e2-e83c-4f90-8381-54fb84c052bc', 'wcolecrough14@nationalgeographic.com', 'Wilone', 'Colecrough',
         'c94VxiHgfq', '2018-11-22 17:56:19', '2019-11-19 08:47:56', '2020-06-13 19:43:46');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('1d58c39f-81ee-4f6e-b554-8d7d48f6b78d', 'klydon15@spotify.com', 'Kary', 'Lydon', 'K7wi5pNF',
         '2018-06-06 02:57:25', '2019-04-17 03:37:30', '2020-04-22 23:04:05');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('82e7eebc-e4ab-4f73-8d0c-942248c1c85f', 'abras16@craigslist.org', 'Abbot', 'Bras', 'gekPLo',
         '2018-01-23 00:43:47', '2019-12-10 18:32:56', '2020-10-30 12:43:09');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('dccccc36-d72f-4593-9aea-c3f8b72cce0d', 'hshotter17@google.com', 'Hermann', 'Shotter', '82DTY2',
         '2018-05-23 21:20:10', '2019-01-08 19:06:08', '2020-03-06 17:56:45');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3fb3edc8-448d-46ab-85cd-f20fb082fee9', 'iizzard18@mapquest.com', 'Irv', 'Izzard', '03w3Skz',
         '2018-12-24 20:43:18', '2019-12-29 22:46:51', '2020-05-18 16:41:47');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('190b6f26-f6fd-4a1c-94a8-b64b503720eb', 'dmcgiveen19@home.pl', 'Dyanna', 'McGiveen', '4B5cY1',
         '2018-05-14 22:31:35', '2019-08-11 13:41:42', '2020-12-03 16:25:14');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('eacf92fa-af93-4222-a8af-3d432a1049aa', 'sharmant1a@linkedin.com', 'Susann', 'Harmant', '1dGaIxMdk',
         '2018-07-23 15:51:28', '2019-10-30 12:37:46', '2020-11-08 09:58:47');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a766f038-fa13-446b-89eb-3db3c8ea7388', 'kcrannell1b@thetimes.co.uk', 'Kirstin', 'Crannell', 'U2M8MwidEc0o',
         '2018-12-16 21:43:33', '2019-07-31 12:07:06', '2020-09-07 06:48:47');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('e9b82be4-96ca-4c25-989c-8ba1ab19b9cc', 'ajardin1c@vk.com', 'Arabella', 'Jardin', 'EpmEVy',
         '2018-09-07 16:08:08', '2019-04-07 00:15:20', '2020-04-07 11:23:04');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('404a8161-a1c6-4497-9939-c57cdec114f0', 'cwoodburne1d@yandex.ru', 'Catharine', 'Woodburne', 'aiJIt6ju',
         '2018-05-16 15:52:32', '2019-12-28 18:31:14', '2020-04-17 19:13:03');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('291a4e78-8260-45c4-a514-54ea1743364a', 'nbleddon1e@qq.com', 'Nils', 'Bleddon', '3DxLRgee3',
         '2018-01-09 02:26:19', '2019-02-19 13:09:22', '2020-08-29 23:14:46');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f4087c4b-1492-49a3-8b93-33e6bbf6d83f', 'ctincombe1f@pbs.org', 'Cassey', 'Tincombe', 'CfRNhA79yN32',
         '2018-01-01 10:37:52', '2019-08-11 03:41:03', '2020-06-12 01:23:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a699b1b9-b1e8-48c0-9a10-1b023c6918dc', 'dmephan1g@acquirethisname.com', 'Delcine', 'Mephan', 'ZXu1jz',
         '2018-11-30 22:16:16', '2019-05-07 16:00:34', '2020-06-26 02:44:55');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('90fec841-093f-42b0-97ac-c43035e99593', 'gdellar1h@yelp.com', 'Glen', 'Dellar', 'DxAlqXL',
         '2018-04-04 22:36:40', '2019-06-13 04:46:19', '2020-04-19 05:48:55');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('841abfed-630c-4193-9929-bc20bab14bd3', 'abendle1i@reddit.com', 'Antonia', 'Bendle', '7c52zp',
         '2018-03-17 09:30:36', '2019-06-28 06:36:48', '2020-12-01 08:21:13');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('13bbf7e7-d6e2-45dc-9f94-0ab7ab2b1438', 'mclaypole1j@reverbnation.com', 'Modesta', 'Claypole', 'pKnkS7',
         '2018-02-21 12:17:41', '2019-01-12 18:00:50', '2020-01-18 20:38:45');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('be97595b-1fec-4815-8401-ccb04ea8ddeb', 'abebb1k@naver.com', 'Adara', 'Bebb', 'kZe2wj6f', '2018-05-22 04:37:41',
         '2019-02-15 21:48:43', '2020-01-22 01:55:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('71191e7a-22db-4fc8-80ed-dfe786244342', 'ggoddard1l@miibeian.gov.cn', 'Gelya', 'Goddard', 'DVXjGQRGxh',
         '2018-09-02 12:57:33', '2019-10-13 00:06:34', '2020-03-28 20:30:09');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('203fae32-7f31-48b3-bd17-7c0aae979401', 'jposen1m@pbs.org', 'Jessie', 'Posen', 'mF6VAzuH9Lb0',
         '2018-06-12 07:33:26', '2019-05-09 21:05:27', '2020-10-21 10:59:43');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3b2ba8a1-0fc6-47b8-928b-d606a18f29be', 'hjencken1n@go.com', 'Haskel', 'Jencken', 'AySHldkC5TSA',
         '2018-12-19 21:28:18', '2019-10-09 14:10:50', '2020-08-21 04:28:35');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('ae3cd209-e9d6-4f73-bd33-5240d48f5dc2', 'fthornley1o@lycos.com', 'Fabien', 'Thornley', 'zJGDOVEOFXFM',
         '2018-10-26 18:40:34', '2019-07-15 23:23:04', '2020-04-24 16:25:42');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('786db672-f929-49b3-82d7-1314b5d9df89', 'khaldenby1p@statcounter.com', 'Kaia', 'Haldenby', 'ECIf5Fw',
         '2018-10-04 13:14:00', '2019-04-19 04:35:18', '2020-01-03 03:36:27');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3da8dd9a-b64a-474d-986c-14540d18625d', 'ditzhaki1q@macromedia.com', 'Del', 'Itzhaki', 'jfN0BQzLjl',
         '2018-06-01 12:57:44', '2019-09-27 04:48:07', '2020-06-27 11:50:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('7f10c62a-b15f-480b-9d70-180f562f5b3c', 'dchadbourne1r@webmd.com', 'Dyanne', 'Chadbourne', 'FMS00brdd3d',
         '2018-07-20 21:56:06', '2019-12-15 15:33:46', '2020-01-23 09:58:38');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('8296486b-5f15-4967-9e88-75472ff6f9b0', 'eharrismith1s@wp.com', 'Elvin', 'Harrismith', 'FPPST89erwzw',
         '2018-04-10 09:43:30', '2019-10-25 01:19:59', '2020-02-29 11:21:52');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('26ea9878-1c3c-4ae3-bc58-8b48216beec4', 'hdudding1t@sohu.com', 'Hamlen', 'Dudding', 'N8FnR7UlzmlS',
         '2018-01-11 21:39:46', '2019-01-01 07:24:24', '2020-07-03 15:29:27');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('8023d03a-8285-4aac-90c1-fb6125717914', 'playing1u@stanford.edu', 'Pavel', 'Laying', 'ltc1o0',
         '2018-07-19 07:36:49', '2019-01-26 21:39:19', '2020-10-10 12:06:04');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2cb807be-717f-4111-8e5f-4b92ab021ae6', 'asebley1v@ucoz.ru', 'Amata', 'Sebley', '7mhVyZHsf7T',
         '2018-09-16 21:35:50', '2019-02-11 19:40:31', '2020-10-06 19:29:09');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('87547705-9223-4e66-9522-ebc3768ce54c', 'anicol1w@google.de', 'Angelica', 'Nicol', 'aYbhUu',
         '2018-01-10 05:45:16', '2019-08-30 21:23:54', '2020-06-25 11:24:08');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2b89712b-ba34-4ebf-a4fc-fe00617df165', 'adockreay1x@clickbank.net', 'Asia', 'Dockreay', 'luXyZyJE8',
         '2018-09-12 11:49:33', '2019-03-27 00:38:43', '2020-12-02 07:58:48');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('b919be5f-2d63-4c35-a1e5-5b8f8e0937a3', 'tfaley1y@cnet.com', 'Tommie', 'Faley', 'GpCNsyxS',
         '2018-02-14 01:39:03', '2019-04-26 20:13:41', '2020-06-30 22:15:18');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2f97ffd3-9001-4aa5-b80e-ef7b3b5ece6d', 'lbault1z@reverbnation.com', 'Lucais', 'Bault', 'fIqD7STzVS',
         '2018-01-11 21:23:47', '2019-03-29 09:42:08', '2020-08-14 14:55:08');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('c97d02fd-f6e4-4804-a1cf-cbfc1e215304', 'gfavela20@nsw.gov.au', 'Giovanna', 'Favela', 'BTQ5Fzb1r',
         '2018-06-16 07:20:03', '2019-02-01 02:22:29', '2020-06-22 02:16:11');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('16f3b3ce-bbbb-478b-9a88-7aecd148c43b', 'piiannoni21@netscape.com', 'Philippine', 'Iiannoni', 'P9NeLsTL',
         '2018-06-03 10:16:18', '2019-09-11 12:03:53', '2020-08-16 11:04:04');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('8f35fa2c-7baf-42ef-abca-c8aa0274ca6a', 'obrecknall22@indiegogo.com', 'Othello', 'Brecknall', 'BqOo1Rd',
         '2018-04-03 16:05:49', '2019-10-09 20:42:39', '2020-08-27 11:17:31');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('eaa6658e-4e59-4fe8-9c86-ea4920c9fffe', 'gpearmine23@yandex.ru', 'Garry', 'Pearmine', 'wFWV5mmooO1u',
         '2018-08-05 00:02:50', '2019-04-07 17:43:37', '2020-10-08 06:54:59');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('eab1fd7f-3398-4e15-a166-c1f2e0a574e4', 'cwinterton24@home.pl', 'Caleb', 'Winterton', 'Le5oF7vUBJ',
         '2018-07-17 18:03:41', '2019-08-14 18:39:57', '2020-06-22 12:12:46');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3e04af19-5fd4-4ffd-85e9-26d16cf4eca5', 'tpittam25@facebook.com', 'Teodoro', 'Pittam', 'WD6Ed1GR0mF',
         '2018-11-24 10:16:14', '2019-11-17 15:08:51', '2020-07-01 18:58:40');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('6505aca4-20b1-40ef-84b0-fe91ca873f00', 'rballister26@g.co', 'Rebekah', 'Ballister', 'fr3vEHSuxk',
         '2018-05-24 17:02:18', '2019-10-05 01:50:50', '2020-02-07 23:44:27');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('87617911-826f-4f56-b751-e1530b67a3da', 'amusico27@bizjournals.com', 'Arnie', 'Musico', 'MfNKr5bO',
         '2018-06-14 01:32:45', '2019-04-20 16:22:28', '2020-08-21 14:58:03');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('0fe6e0e0-8273-47e0-857d-3cad830cea09', 'lodonohoe28@comcast.net', 'Liuka', 'O'' Donohoe', '7ZVLGh2z',
         '2018-12-30 02:27:52', '2019-06-05 07:28:11', '2020-02-27 14:07:48');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('19d2f205-9318-4729-902e-4113ddb4eab5', 'rbauman29@dailymotion.com', 'Roanne', 'Bauman', 'jFp2UBfnkdN',
         '2018-11-24 21:30:11', '2019-05-16 04:02:40', '2020-03-10 17:26:48');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('568e77ca-35c2-4db5-9578-973fa794b8e2', 'cerwin2a@nhs.uk', 'Chancey', 'Erwin', 'Yo7GLSOc',
         '2018-01-10 15:31:04', '2019-09-22 16:45:43', '2020-06-15 19:19:49');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('8101978c-4f51-4f2a-ab7f-392883e9674b', 'hmacgragh2b@phoca.cz', 'Hyacinth', 'MacGragh', 'fBAQFciR4DDy',
         '2018-08-26 08:14:05', '2019-08-03 13:50:18', '2020-09-16 08:50:03');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('b7a5c182-c41c-45e0-805d-0be8ccd3354b', 'aedeson2c@ycombinator.com', 'Allyce', 'Edeson', 'rq0A8RbN',
         '2018-06-14 20:07:42', '2019-11-20 05:35:18', '2020-04-07 14:27:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('5cf1ed48-fadf-44fd-8799-d6bbe80f2411', 'dhockey2d@ebay.com', 'Domini', 'Hockey', 'fBylKUiN',
         '2018-04-29 21:32:41', '2019-03-01 19:10:34', '2020-05-25 05:40:44');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('4867f584-5bbf-46cb-94c0-b39e364eb454', 'oludmann2e@blogspot.com', 'Odetta', 'Ludmann', 'Ug2AAFHJ2',
         '2018-07-16 16:01:04', '2019-07-13 19:38:49', '2020-05-05 15:44:37');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('686679a9-c913-4821-a95c-28e3e74dc71c', 'bwasielewski2f@deviantart.com', 'Bowie', 'Wasielewski', 'rwluHd8rz',
         '2018-09-30 00:54:54', '2019-01-11 18:06:46', '2020-06-06 07:43:22');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('e8e00ca0-91b4-4f4b-816f-1f48a5914fc3', 'ebarff2g@ucoz.com', 'Elroy', 'Barff', 'WK5qBgkybhm',
         '2018-01-22 06:47:17', '2019-07-04 05:55:48', '2020-06-19 04:57:46');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('dc6698f4-fc73-4880-b13f-b1925dc523a1', 'dwallentin2h@about.com', 'Deane', 'Wallentin', '5POrEz',
         '2018-04-21 13:57:05', '2019-02-20 00:56:01', '2020-10-03 00:29:12');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('937b48c2-d9b8-49c2-a906-a0275ef77d1d', 'atunnow2i@un.org', 'Ardelis', 'Tunnow', 'LXNojc2PS',
         '2018-10-04 12:49:48', '2019-09-14 00:20:16', '2020-12-21 04:34:57');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('93acf137-3326-486f-899a-0fdb77274270', 'rargyle2j@slideshare.net', 'Raine', 'Argyle', 'uE6Pk5HHLz',
         '2018-01-21 07:15:17', '2019-05-06 08:45:04', '2020-11-25 21:13:00');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('82ba92f2-032a-48d6-985f-8eef27976dfd', 'sfarquhar2k@nhs.uk', 'Sergei', 'Farquhar', 'xl4y1oyc4',
         '2018-05-10 23:22:42', '2019-09-19 13:06:05', '2020-05-04 08:25:27');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('631a1dff-37a1-4a01-bf08-8af0421073d0', 'balvarado2l@reverbnation.com', 'Bourke', 'Alvarado', 'wFL6jVAdy',
         '2018-10-31 14:20:52', '2019-04-06 17:04:25', '2020-04-08 06:15:38');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('106dc922-320a-480c-9d62-1890359dd697', 'cremon2m@oakley.com', 'Constantin', 'Remon', 'JhsaY3dV',
         '2018-11-10 02:10:41', '2019-12-19 11:17:07', '2020-01-21 13:56:55');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f975d5a1-cc2c-4a8d-9df6-747115c58d3d', 'gdunton2n@bigcartel.com', 'Gill', 'Dunton', 'nfaoiK9Ny',
         '2018-04-14 03:50:59', '2019-02-09 07:45:11', '2020-12-01 21:15:01');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f1c7b124-e0da-4341-ae7e-d360602db2d3', 'iskellon2o@arstechnica.com', 'Idaline', 'Skellon', 'CwQA4nxVCA',
         '2018-11-30 15:38:42', '2019-11-24 17:33:14', '2020-07-11 19:53:31');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('0ce7c044-4ff3-424c-9a51-fd3fefc0f570', 'cshevelin2p@icq.com', 'Constantine', 'Shevelin', '404d7x4z',
         '2018-04-19 13:28:40', '2019-11-25 00:54:39', '2020-11-20 04:25:14');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2d4f3ad6-759c-4fa0-9375-c210d0a6f498', 'lmilton2q@elegantthemes.com', 'Libby', 'Milton', 'jPTNjKiofe1V',
         '2018-09-12 15:39:10', '2019-01-18 00:53:13', '2020-05-26 11:42:50');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('bdf68634-0df4-4033-8e41-8f29520f1f41', 'wnaseby2r@bigcartel.com', 'Wake', 'Naseby', '1qclwM5HIis',
         '2018-05-14 05:25:40', '2019-05-14 07:12:29', '2020-05-29 11:15:10');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('166cd01b-f977-4f38-89c2-0a64cd71f868', 'sguilayn2s@apache.org', 'Selinda', 'Guilayn', 'egwxijSKjr',
         '2018-01-07 16:32:16', '2019-09-16 10:16:22', '2020-06-08 01:46:41');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('1586a887-7ddb-47f1-b5be-03ce4d3f28b3', 'eolennikov2t@fema.gov', 'Ephrem', 'Olennikov', 'Ta2f0m',
         '2018-07-10 05:48:03', '2019-08-08 04:41:46', '2020-03-18 04:23:22');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('14554152-63cf-441d-90c2-095e1f406293', 'jjeannenet2u@buzzfeed.com', 'Jasper', 'Jeannenet', 'GRckAGknIXlC',
         '2018-08-29 14:30:11', '2019-11-17 04:44:52', '2020-05-13 02:57:36');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('5f737f41-fd26-4b5e-bb3e-b677dde2bfd7', 'dbabbidge2v@tiny.cc', 'Devan', 'Babbidge', 'cjJr2It3w',
         '2018-03-30 09:20:25', '2019-07-24 17:36:17', '2020-10-25 17:04:22');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2f45e59f-2292-4065-ac06-1205b28a09ca', 'gbrumwell2w@plala.or.jp', 'Genvieve', 'Brumwell', 'X28qV50XADAK',
         '2018-10-25 21:12:33', '2019-07-16 06:34:52', '2020-05-05 12:23:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('4ec76179-1716-470a-9a9a-39ca8566245f', 'chasnip2x@irs.gov', 'Chrissy', 'Hasnip', 'KlueUD',
         '2018-02-05 07:04:38', '2019-04-01 18:37:29', '2020-08-01 17:58:49');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('705ebcb4-c2a6-4599-8e0c-dfe85474fae4', 'awoodwing2y@wired.com', 'Archambault', 'Woodwing', 'rFKIwb2j6Cf',
         '2018-01-22 00:16:58', '2019-04-23 13:59:22', '2020-05-05 05:01:49');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('22726ff5-2dc1-4ed8-8e76-36ed892415b0', 'egreenan2z@businessinsider.com', 'Elbertine', 'Greenan', 'wdP4NDJ',
         '2018-10-06 05:26:03', '2019-10-21 16:36:37', '2020-01-15 13:14:39');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('688d227a-3722-4789-99be-6ae4ef1b07b3', 'amaccurley30@dagondesign.com', 'Aluino', 'MacCurley', 'Ggcjj7gB7az',
         '2018-11-02 15:57:11', '2019-06-14 00:34:16', '2020-10-01 02:25:48');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('37d29d66-b10e-427e-8724-ae909f70b2ad', 'elewsam31@joomla.org', 'Edd', 'Lewsam', 'ZvmPZK1Y',
         '2018-02-19 03:34:49', '2019-11-23 22:23:47', '2020-12-09 06:38:54');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('b64a68d1-8d3c-48f4-9a47-7ab05d8630b0', 'ndarlow32@microsoft.com', 'Nessy', 'Darlow', 'I12mYIHY7oxC',
         '2018-02-12 17:32:51', '2019-02-16 19:01:00', '2020-08-01 07:43:21');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('674bff00-5f23-44da-a7de-25eaeb4ba85a', 'eciobutaro33@ebay.com', 'Emalia', 'Ciobutaro', 'Mcm9pMwX1pW',
         '2018-04-28 09:43:17', '2019-10-13 23:51:42', '2020-06-08 03:29:04');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('73b79f5c-d3f8-4757-8e96-6e103b01542c', 'egedney34@mtv.com', 'Emmanuel', 'Gedney', '0UGop5vr4',
         '2018-03-02 13:16:45', '2019-07-06 05:29:14', '2020-09-03 16:42:38');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('16de6518-160e-4199-a511-f3059d022128', 'sickovici35@barnesandnoble.com', 'Stephana', 'Ickovici', 'SEcRPB',
         '2018-06-16 13:23:25', '2019-02-24 11:55:13', '2020-08-07 06:02:16');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('4f310cc4-f725-441e-84b8-f3e8fd4b5f9d', 'cmalacrida36@desdev.cn', 'Cleavland', 'Malacrida', 'fiCK5h',
         '2018-07-07 17:50:17', '2019-02-03 11:53:20', '2020-05-01 02:01:45');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f892d42c-8cec-456b-9ba9-43be0500a89f', 'rkirtley37@wsj.com', 'Rickert', 'Kirtley', 'Ab7MjQr8f4A',
         '2018-07-27 02:07:41', '2019-02-04 00:23:17', '2020-01-21 05:32:33');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('be129f13-3956-4a38-b456-91a6a240f449', 'gvasilik38@cbsnews.com', 'Gav', 'Vasilik', 'TXl0VrQ2XT',
         '2018-06-18 04:22:22', '2019-05-16 22:17:19', '2020-03-24 00:52:40');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('90062af4-f4e7-463f-a448-c38b120a5958', 'pstucksbury39@homestead.com', 'Prudy', 'Stucksbury', 'I37sc27m',
         '2018-07-31 06:43:32', '2019-10-21 11:37:31', '2020-05-03 12:09:29');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('014bda01-2714-4587-833c-521f368d1aaa', 'fsings3a@nba.com', 'Felicle', 'Sings', 'x2LnCRp',
         '2018-05-05 19:01:25', '2019-03-15 16:16:29', '2020-12-06 07:38:14');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('120a092c-a8e4-494d-aa00-deff9cf5ad9c', 'fbinnall3b@cafepress.com', 'Filbert', 'Binnall', '9hgnKXjVMViw',
         '2018-06-09 21:51:14', '2019-01-24 03:05:23', '2020-05-11 21:17:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('26c00d29-9c33-4366-adc7-056ce1f5d00a', 'fosbiston3c@free.fr', 'Freddy', 'Osbiston', 'AMMEin',
         '2018-09-30 16:24:06', '2019-07-13 20:36:30', '2020-03-01 12:18:27');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('6a6108d3-d350-4fb9-a37f-8681e9580aa1', 'zpearton3d@blog.com', 'Zacharias', 'Pearton', '01Ip3fPC2x',
         '2018-03-16 18:12:27', '2019-05-26 09:28:02', '2020-09-19 12:45:15');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('58846bb9-2f04-4753-85fe-776182cd47c5', 'cveljes3e@slashdot.org', 'Christal', 'Veljes', 'ea1rfp',
         '2018-05-26 04:10:00', '2019-08-09 16:15:21', '2020-07-29 02:53:08');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('c5414bb6-415b-4137-8e8d-d47a6fb29f27', 'cdeathridge3f@symantec.com', 'Christal', 'Deathridge', 'h2nYgMTiNZT',
         '2018-06-10 04:00:55', '2019-10-08 02:08:56', '2020-07-22 19:42:16');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3b7d0ae8-4905-4f63-9576-83873a845311', 'smckennan3g@sciencedaily.com', 'Sonya', 'McKennan', 'h659YEhAO',
         '2018-11-19 13:57:34', '2019-11-05 16:23:44', '2020-07-01 17:23:00');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('24b6eafb-17a8-4ffa-8fec-db7074c73e01', 'syablsley3h@instagram.com', 'Stevy', 'Yablsley', 'NYw8LPNMSZo',
         '2018-05-04 22:58:15', '2019-10-19 03:36:46', '2020-09-24 21:04:42');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('30b6ae85-344b-44a1-bb9b-9c91caebb91b', 'phaet3i@myspace.com', 'Pier', 'Haet', 'dnTWKft26',
         '2018-09-04 05:14:35', '2019-11-19 17:29:38', '2020-10-08 11:39:10');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('59b3c808-8812-4c31-8e30-c08c7c7b5297', 'mboagey3j@rediff.com', 'Merrily', 'Boagey', 'f4Pqvsh',
         '2018-10-04 02:06:55', '2019-09-17 17:52:20', '2020-05-21 17:07:01');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f697cbe8-8b99-4c68-a9ac-bc0d6f682766', 'akenwell3k@dell.com', 'Amory', 'Kenwell', '4NeF9uyf',
         '2018-10-07 10:05:23', '2019-11-25 07:52:51', '2020-02-28 11:50:26');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('23578e17-1c18-4bc0-9a98-66929c2eb819', 'crichley3l@barnesandnoble.com', 'Claresta', 'Richley', '15DeOY',
         '2018-11-16 15:06:03', '2019-05-03 16:33:03', '2020-01-14 14:40:31');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('82d37f74-17a1-42f2-9d15-731c868fe56c', 'lcoraini3m@squarespace.com', 'Leontine', 'Coraini', 'N1kDGoP2',
         '2018-04-26 12:27:46', '2019-08-22 06:48:24', '2020-08-28 08:13:05');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('fbcf878d-f5b7-4502-bcfb-766ce39cd5be', 'ltallent3n@jimdo.com', 'Laura', 'Tallent', 't0EqRyC',
         '2018-05-09 12:20:58', '2019-12-26 07:40:54', '2020-11-03 03:00:59');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('1a2b8425-9a24-49e5-92bc-7577eaec6b21', 'ggroucutt3o@pagesperso-orange.fr', 'Gallard', 'Groucutt', 'v5d7MK2Gs',
         '2018-06-04 12:00:34', '2019-08-31 12:41:46', '2020-05-25 23:46:53');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('943b63e2-1f2d-4fc1-900a-8f1f29f94056', 'fsearl3p@sogou.com', 'Fred', 'Searl', '2iki3E3', '2018-09-05 12:49:24',
         '2019-11-24 12:08:57', '2020-08-28 01:58:29');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('50c35097-7924-44fa-ae41-868f9df3ab87', 'lsoaper3q@hhs.gov', 'Lynsey', 'Soaper', 'i79ZwR9Fq6P',
         '2018-10-15 13:44:33', '2019-11-21 10:54:13', '2020-03-05 04:05:06');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('fbc3f56e-8323-43de-9402-aeb1a2818bdf', 'mbeasleigh3r@amazonaws.com', 'Marika', 'Beasleigh', '82SLQhSkpj',
         '2018-01-19 00:04:39', '2019-03-24 00:15:46', '2020-11-15 10:45:43');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('ed7c9178-dd2d-4caa-ab25-bc4218d02ae1', 'slatek3s@theglobeandmail.com', 'Shanon', 'Latek', 'HVqDfj2cOV',
         '2018-04-01 06:07:35', '2019-11-10 23:42:24', '2020-05-24 03:02:23');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('5b114c72-9372-43ba-8c1f-41d562509637', 'ptrevaskus3t@sitemeter.com', 'Patience', 'Trevaskus', 'auv5Houl',
         '2018-07-02 19:09:59', '2019-08-03 00:40:47', '2020-10-06 05:47:46');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('9e749cd6-8979-4d20-9fbd-a0160ab8604a', 'nmurfin3u@ezinearticles.com', 'Neala', 'Murfin', 'qOKOQ0hOyiR',
         '2018-06-19 03:05:53', '2019-05-13 01:59:36', '2020-11-20 21:09:49');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('ede6883c-be65-4331-9ac0-17b15c9870ba', 'fchasier3v@mapy.cz', 'Freedman', 'Chasier', 'oVlgBf',
         '2018-11-22 17:33:09', '2019-04-21 08:25:49', '2020-09-16 14:19:39');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('19b9c50e-cf91-4920-ad86-4aa79dab1638', 'aadao3w@ycombinator.com', 'Amity', 'Adao', 'BoHtZA4Eg',
         '2018-11-24 03:31:46', '2019-07-10 07:15:38', '2020-05-28 20:30:05');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('98afab32-9c1c-4317-a051-0591a5322614', 'cconn3x@google.es', 'Corabella', 'Conn', 'ubLyKzu',
         '2018-06-26 23:52:54', '2019-01-26 01:57:45', '2020-01-08 12:37:43');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a3d661bd-f0e4-498a-8fa3-44cee937fbe8', 'hsomerville3y@etsy.com', 'Hayes', 'Somerville', 'cgvlN87Yjj',
         '2018-07-02 21:54:09', '2019-05-19 02:26:26', '2020-05-17 14:58:37');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('dc899d74-1bb4-4588-9d50-ba3b23bcec5d', 'bbradburn3z@yale.edu', 'Blanca', 'Bradburn', 'mF3c1N7RdG',
         '2018-11-10 19:56:11', '2019-05-22 14:08:25', '2020-09-29 15:53:15');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('389f364d-f24f-4c87-ab06-fee0c96064d3', 'ebugge40@xrea.com', 'Eveline', 'Bugge', 'cYJLkb0t0',
         '2018-12-11 00:17:49', '2019-05-04 09:37:21', '2020-09-27 02:08:16');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('00366fb9-cd76-47e0-b3c6-cbd611650d9e', 'hmersh41@dell.com', 'Hortense', 'Mersh',
         '$2y$12$tShEMkzDjNDMaquL40hTq.tAfhWEf84OypeotqvIn1vpGO9J.MmA.',
         '2018-05-30 08:51:24', '2019-09-28 11:54:41', '2020-01-26 18:07:17');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('dbee8ed6-1f0a-4dff-88d2-d0594af80da8', 'wmcgowran42@plala.or.jp', 'Welsh', 'McGowran', 'HF8kVglzsb',
         '2018-02-21 10:01:53', '2019-03-17 20:39:33', '2020-07-06 07:32:10');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('1eada2a5-1b8f-44f7-aeaa-675e2490e6f5', 'glorenzin43@odnoklassniki.ru', 'Griffie', 'Lorenzin', 'kIQqfP',
         '2018-04-19 06:06:37', '2019-04-08 05:18:46', '2020-10-01 04:39:30');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('e689162a-b2af-46e9-9653-f2c06cb181c6', 'etills44@bbb.org', 'Edik', 'Tills', 'Obrhzd', '2018-07-10 02:17:41',
         '2019-12-18 15:02:31', '2020-07-01 17:21:44');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('ee28cd7b-ae9b-4a5c-bf7f-16e46ec0a11f', 'sgiraths45@flavors.me', 'Starla', 'Giraths', '2aEXfy9JhD',
         '2018-05-09 15:51:50', '2019-11-19 09:02:44', '2020-09-18 15:00:59');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('7831d79f-c85a-4666-85a6-0fce28388266', 'emcconigal46@surveymonkey.com', 'Edythe', 'McConigal', 'z1IlXntb',
         '2018-01-19 10:31:09', '2019-07-20 21:37:01', '2020-07-25 01:51:17');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('278278cb-f66d-41ef-a1d9-63f1d50bd4c5', 'jtarrier47@microsoft.com', 'Jacqui', 'Tarrier', 'HXSx8KoV',
         '2018-04-18 14:15:31', '2019-09-15 15:31:37', '2020-04-02 15:07:13');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('83128ef0-7ccd-4213-b30b-8bc4ce172d9e', 'mtylor48@army.mil', 'Mora', 'Tylor', 'lHS9vlQ', '2018-04-18 15:34:19',
         '2019-10-27 07:43:51', '2020-07-06 02:59:53');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('cfe8cd04-0c7d-4639-bdf1-9aa96b808dd4', 'bemnoney49@i2i.jp', 'Brendis', 'Emnoney', 'CHcvFjrFhD',
         '2018-05-09 09:07:31', '2019-10-18 20:55:40', '2020-05-25 10:33:13');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a346465b-9251-4b5b-9fa1-a0814f74bd54', 'hfebre4a@posterous.com', 'Hunter', 'Febre', 'Rl9GCSLG20S',
         '2018-06-26 13:15:43', '2019-08-23 02:07:07', '2020-07-02 05:48:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('1ed18498-8b43-471f-85b6-2eede5809848', 'sflooks4b@webmd.com', 'Sanders', 'Flooks', 'Nw3BA1Wij',
         '2018-11-08 05:52:56', '2019-03-19 05:32:44', '2020-05-17 12:51:19');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('340340e9-609b-44eb-b945-44579710bea8', 'gbloan4c@ustream.tv', 'Gennie', 'Bloan', 'GejeC2I6GG',
         '2018-10-17 18:16:10', '2019-05-25 01:32:10', '2020-01-21 08:22:42');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('6cde7cc5-5269-4906-afbc-f61c5fc3ac61', 'jpickup4d@narod.ru', 'Joe', 'Pickup', 'aS6fTo90SWZ',
         '2018-09-13 03:31:34', '2019-09-04 17:04:10', '2020-11-05 10:34:37');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f69f6cbc-078f-4911-9949-74cded8293d3', 'pgale4e@ezinearticles.com', 'Peggie', 'Gale', 'VLoHhXsqL2Yy',
         '2018-05-08 15:42:14', '2019-04-24 23:10:24', '2020-01-12 09:17:33');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('257ebeaf-c927-4da2-b43f-b00017315047', 'kvallens4f@google.cn', 'Kerby', 'Vallens', 'm11a63AcvrYo',
         '2018-08-05 23:25:40', '2019-06-26 13:25:53', '2020-02-06 19:35:38');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('683ca454-73d3-4480-a58f-dce32447fa54', 'jgannicleff4g@goo.ne.jp', 'Julianna', 'Gannicleff', 'Sf4TPRSfrt',
         '2018-08-14 05:05:44', '2019-02-25 15:15:00', '2020-08-01 06:15:49');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('ab4564b6-2c33-4705-8426-29202063d843', 'czimmermanns4h@theguardian.com', 'Catarina', 'Zimmermanns', 'gQeR3Gt',
         '2018-08-22 10:17:32', '2019-02-09 21:32:13', '2020-05-16 14:04:08');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('c68e2ee0-53ba-4589-adf1-4406b6f84860', 'speirson4i@pagesperso-orange.fr', 'Stafford', 'Peirson', '5qudsR1',
         '2018-01-29 16:23:07', '2019-01-06 12:59:04', '2020-01-04 11:12:29');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('04618320-49d3-43d6-b013-39ab5bccfe2c', 'dsoares4j@hubpages.com', 'Dorena', 'Soares', 'Yv9uzxDg90kl',
         '2018-07-17 14:21:45', '2019-08-21 15:15:33', '2020-07-05 02:30:24');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f91ccf77-7805-4d12-997e-dab8d40f91e1', 'wbubear4k@cbc.ca', 'Wilmette', 'Bubear', 'VKS7KZ5aH',
         '2018-09-08 06:12:54', '2019-11-25 04:45:05', '2020-02-20 20:50:07');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('51a11da3-fdb3-4038-b0e6-348410aa2f17', 'gsawday4l@bigcartel.com', 'Giovanna', 'Sawday', 'UbdiG5NKD6',
         '2018-10-15 05:05:25', '2019-11-14 23:15:00', '2020-06-11 21:40:31');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('42a6ef91-6e4d-4399-80e9-6c3770c83883', 'jcahalin4m@noaa.gov', 'Jackquelin', 'Cahalin', 'hz1k1am7O',
         '2018-05-13 20:36:01', '2019-05-02 06:48:40', '2020-11-03 12:44:53');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('63d0cbe8-123b-4c51-8db5-95b15dc6bf75', 'pcauldfield4n@stanford.edu', 'Percy', 'Cauldfield', 'iKJ56j',
         '2018-12-11 01:16:48', '2019-03-05 10:13:17', '2020-06-17 06:37:21');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f1be7dae-1554-43a3-82a6-9f61c55e4a70', 'bmacafee4o@paypal.com', 'Bobbie', 'MacAfee', 'ozrpeV',
         '2018-12-08 10:17:40', '2019-05-15 13:01:33', '2020-06-10 20:08:47');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('716149b1-ba80-4af4-9d01-5701c70b44c2', 'oplomer4p@cornell.edu', 'Olenolin', 'Plomer', 'uQZmHW0uzf',
         '2018-12-31 17:23:31', '2019-10-05 00:25:50', '2020-04-21 11:33:42');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('348b03bb-8fb9-4d71-94fa-b4bf34eed71e', 'hspini4q@addthis.com', 'Hali', 'Spini', 'lUFwuG',
         '2018-03-20 09:18:30', '2019-07-11 02:58:01', '2020-05-17 04:38:31');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('eb6584c2-eaf0-4514-85b1-df3fd64aa8b0', 'nwederell4r@prlog.org', 'Nappie', 'Wederell', 'asdgYR',
         '2018-07-07 04:41:35', '2019-01-21 23:42:37', '2020-06-26 09:56:01');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('78b46409-7d92-4753-a7a5-2cf1e1db2732', 'vwynter4s@hugedomains.com', 'Valerye', 'Wynter', 'pwVGK94Jahg',
         '2018-01-29 16:40:07', '2019-09-23 21:18:12', '2020-02-03 00:26:23');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('0aa10fc2-f894-4d7f-9c2b-fd82d79fef85', 'mburdfield4t@blog.com', 'Margaret', 'Burdfield', 'rScKzbr2V',
         '2018-10-27 20:40:57', '2019-09-12 15:16:32', '2020-12-31 09:57:52');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('8a6a37cd-7153-4b40-9b6a-10dfc841445e', 'wgilbart4u@drupal.org', 'Wilie', 'Gilbart', 'DAiHqg',
         '2018-04-04 13:55:39', '2019-10-29 20:36:49', '2020-07-15 00:30:43');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a1ae317a-eae8-447e-9c12-f2015d3aab44', 'cshark4v@about.com', 'Calley', 'Shark', 'oD3HxJ',
         '2018-09-26 20:55:12', '2019-09-20 15:20:34', '2020-03-07 02:42:01');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f5cccc1a-0c20-4eb8-955f-81df847dc2b2', 'pkubicek4w@amazon.com', 'Paula', 'Kubicek', 'ADCeOF3tEbp',
         '2018-09-30 23:02:49', '2019-08-05 10:10:01', '2020-10-28 06:19:50');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('1b98994c-7d4f-493f-b4ec-2a880ad782af', 'tbucham4x@desdev.cn', 'Thomas', 'Bucham', 'PohOsz830I',
         '2018-02-16 06:13:51', '2019-08-10 18:38:29', '2020-08-07 15:22:21');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f046e920-c849-49b5-9d23-fd1e15762a5f', 'kminchindon4y@sciencedirect.com', 'Keane', 'Minchindon', '02sILRIE',
         '2018-05-09 22:54:24', '2019-03-31 14:30:00', '2020-11-16 22:38:51');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3c92b268-e101-45d3-84a2-f4a4cb3b60e4', 'mpinnock4z@auda.org.au', 'Maighdiln', 'Pinnock', 'AnmOQFAm',
         '2018-05-09 17:56:18', '2019-07-24 11:56:32', '2020-01-30 15:37:51');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('d83c2f79-93e9-49fe-9cb6-df5ae6e46439', 'vivanenkov50@elegantthemes.com', 'Vite', 'Ivanenkov', 'xgvI9ryElQ4I',
         '2018-09-13 16:07:22', '2019-11-04 05:16:09', '2020-11-10 04:24:36');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('18b006ab-b46f-49a0-b1df-f0306f82142b', 'kortner51@geocities.com', 'Kristal', 'Ortner', 'jXfdESn',
         '2018-01-11 20:40:21', '2019-04-08 03:35:10', '2020-11-30 16:20:46');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2367458a-95ca-4d53-971c-1078fc73f829', 'mbillham52@flickr.com', 'Mary', 'Billham', 'lSxq9sv',
         '2018-07-20 15:33:51', '2019-05-12 12:54:12', '2020-06-04 15:15:57');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('3a068cfe-e40c-4478-be01-d7dca7896b21', 'acorson53@amazonaws.com', 'Alphard', 'Corson', '0cAfJ0CZ',
         '2018-11-03 12:42:20', '2019-05-09 13:12:47', '2020-05-10 20:15:26');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('194a2170-c302-4e3e-93c6-69c80e24fb95', 'wcasson54@usatoday.com', 'Wyatan', 'Casson', 'BoMP62o',
         '2018-11-19 05:02:02', '2019-11-22 21:46:36', '2020-02-03 16:27:05');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2d97660f-a7b5-41f0-aadc-61e11c654be2', 'lharefoot55@seesaa.net', 'Leese', 'Harefoot', 'UX2jL4U',
         '2018-09-03 21:30:43', '2019-05-29 00:16:20', '2020-04-25 23:33:15');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f32ae595-5907-466a-8497-d8760957216c', 'gshawcroft56@craigslist.org', 'Grenville', 'Shawcroft', 'u2jEJJTeu',
         '2018-02-20 18:45:38', '2019-10-27 09:42:39', '2020-10-12 20:00:02');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('2ff858e1-48ff-4722-ac76-e76ab9b44e90', 'mbutcher57@ted.com', 'Minette', 'Butcher', 'knvjcanT',
         '2018-05-24 08:58:12', '2019-09-22 15:08:07', '2020-09-20 01:22:09');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('5ab5082e-2b52-4af4-ad22-3ecab36b5134', 'jgrinnell58@imgur.com', 'Johannah', 'Grinnell', 'LtaFlBRrzYU4',
         '2018-11-01 16:07:42', '2019-01-18 21:54:42', '2020-02-22 23:27:55');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('b18c7556-b968-44db-a92a-8737d985a4a8', 'loehme59@google.com.hk', 'Lock', 'Oehme', 'npDvNarl',
         '2018-11-09 23:34:13', '2019-08-21 04:24:36', '2020-05-30 00:50:46');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('4a65264a-b6ca-4b98-93ce-32fe5fd06563', 'gmatussevich5a@kickstarter.com', 'Garwood', 'Matussevich', 'gTcUP24j',
         '2018-01-10 09:12:08', '2019-09-20 09:24:55', '2020-04-01 05:54:37');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('7538d8a8-29bd-41eb-8e36-dba531491c70', 'dnewbury5b@weebly.com', 'Deanna', 'Newbury', 'QhJmwX8swE',
         '2018-05-27 20:56:39', '2019-03-22 01:57:45', '2020-04-21 04:36:18');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('c888617a-8bdf-4933-89c6-c72a06bfa0e3', 'zcroley5c@oaic.gov.au', 'Zachery', 'Croley', '2Es4R4z',
         '2018-10-28 10:51:57', '2019-01-06 15:47:56', '2020-07-08 20:21:01');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('f807ccf9-3d17-4a65-8bcd-5bb842852605', 'ebennen5d@nbcnews.com', 'Ev', 'Bennen', '7YVUjvZNHs',
         '2018-04-29 07:32:28', '2019-03-02 01:14:30', '2020-02-03 19:52:35');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('a0548ed8-0dcb-4955-a4a1-7cf9e9e985e9', 'llarcombe5e@chicagotribune.com', 'Lil', 'Larcombe', '8az6pfBpSf',
         '2018-07-31 09:42:59', '2019-06-16 15:29:41', '2020-09-12 07:18:43');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('65623433-1701-44d1-8d1b-48a21e347ffe', 'lgamil5f@weibo.com', 'Lyndell', 'Gamil', 'hu2k3FfGo',
         '2018-04-15 20:47:38', '2019-07-19 10:31:53', '2020-10-13 02:11:50');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('449215ec-3b54-4a7c-8277-a4f2fa03dc21', 'itomsen5g@yellowpages.com', 'Ingeborg', 'Tomsen', 'OpIU3o3Qni',
         '2018-07-16 22:18:13', '2019-08-25 08:39:11', '2020-01-14 13:23:33');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('04d8d613-f6c1-4d42-a265-2411b3ca16da', 'wcirlos5h@infoseek.co.jp', 'Wynn', 'Cirlos', 'pFJRYxZ7papU',
         '2018-05-23 08:38:26', '2019-04-17 01:55:22', '2020-11-30 09:56:02');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('c569d041-5546-48b4-bfee-16dd46dcc15a', 'cmacon5i@cornell.edu', 'Christoper', 'Macon', 'kZ3L9xRocX6',
         '2018-11-09 19:33:05', '2019-12-13 21:47:52', '2020-08-01 06:09:41');
-insert into Users (ID, Email, Firstname, Lastname, Password, CreatedAt, UpdatedAt, LastLogin)
+insert into Users (ID, Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('0425dcfb-68f4-4267-a566-87c7c18e7b99', 'bdisley5j@digg.com', 'Brewster', 'Disley', '9omp0G6',
         '2018-11-21 21:40:00', '2019-01-16 02:45:41', '2020-06-05 20:02:58');
 
@@ -604,45 +604,45 @@ values ('0425dcfb-68f4-4267-a566-87c7c18e7b99', 'bdisley5j@digg.com', 'Brewster'
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('b90ac88c-80cb-4ea8-a3e4-cc2c1977b2ae', '2018-02-19 04:58:12', '2019-06-30 04:46:55', '2020-12-31 14:46:08',
         'https://blinklist.com/tellus/semper/interdum.xml', 'JcVeHvj0', 301,
-        (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('e6964b95-6867-4eb9-9c67-2cdd78a6124c', '2018-12-17 23:15:42', '2019-02-07 23:00:42', '2020-02-17 07:33:33',
         'https://unblog.fr/consequat/in/consequat/ut/nulla/sed/accumsan.jpg', 'du4pWpWM', 301,
-        (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('4b8ec169-1893-4101-aff9-e6d669d0a4a4', '2018-11-05 10:01:08', '2019-11-04 07:56:22', '2020-05-01 07:33:32',
         'https://mashable.com/feugiat/et/eros/vestibulum/ac/est.xml', 'KenGwams6', 301,
-        (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('c633f1f3-1a50-484e-95d9-bae88b2ca948', '2018-05-07 09:06:51', '2019-06-15 14:32:11', '2020-03-02 06:48:55',
-        'http://arstechnica.com/aliquam.html', 'r1W2McgLT7', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        'http://arstechnica.com/aliquam.html', 'r1W2McgLT7', 301, '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('a7de3ae2-fb59-4214-a7f8-ba8a40d218e3', '2018-04-07 13:56:12', '2019-06-17 22:06:08', '2020-10-22 16:21:33',
         'http://tuttocitta.it/viverra/pede/ac/diam.aspx', 'FmCJXSWYJ', 301,
-        (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('47ab8425-461a-49b8-a6c2-090319e8bcb1', '2018-10-25 02:13:56', '2019-06-15 17:53:26', '2020-08-06 02:02:57',
-        'http://edublogs.org/neque.json', 'KI2B6Zkjlj1I', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        'http://edublogs.org/neque.json', 'KI2B6Zkjlj1I', 301, '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('8f554345-11f6-4975-b83b-e1890287438a', '2018-01-06 13:48:40', '2019-05-27 10:43:12', '2020-11-01 14:34:39',
-        'https://tuttocitta.it/sociis.png', 'a86Jqh', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        'https://tuttocitta.it/sociis.png', 'a86Jqh', 301, '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('3b659acf-5687-4f5b-8511-ed5e034a3310', '2018-03-13 11:05:11', '2019-08-28 18:11:47', '2020-05-10 15:16:24',
-        'http://hugedomains.com/vivamus.json', 'VPD0Mgv', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        'http://hugedomains.com/vivamus.json', 'VPD0Mgv', 301, '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('6a392462-8806-459d-84db-38c100ae3149', '2018-01-23 03:33:33', '2019-03-05 01:49:13', '2020-05-06 10:10:01',
-        'https://forbes.com/in.aspx', 'vUEGvl1eFYV', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        'https://forbes.com/in.aspx', 'vUEGvl1eFYV', 301, '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('80fa75e8-bdad-4ab7-b5b8-3cc70fd70a99', '2018-07-06 17:20:05', '2019-02-28 09:23:56', '2020-05-11 02:58:58',
         'http://netvibes.com/lacinia/eget/tincidunt/eget.xml', 'jc6Om6Nbt', 301,
-        (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('add9b7cd-f263-4483-94c7-fed0303afcb6', '2018-06-27 18:48:18', '2019-07-30 20:45:40', '2020-12-19 02:10:25',
-        'https://acquirethisname.com/in.jpg', 'nnPeUIwf5S', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        'https://acquirethisname.com/in.jpg', 'nnPeUIwf5S', 301, '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('581bed59-9267-4bd4-b7df-6f3b4fc4a071', '2018-04-23 02:52:53', '2019-04-20 19:09:12', '2020-04-15 05:20:15',
         'http://last.fm/a/suscipit/nulla/elit/ac/nulla/sed.aspx', '8i25vp1bT', 301,
-        (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('61d06e31-7129-4075-ae0d-504058b0e845', '2018-12-27 12:22:50', '2019-04-15 10:27:41', '2020-04-23 19:15:06',
         'https://hc360.com/volutpat/dui/maecenas/tristique/est/et.html', 'DUXJ1a', 301,
@@ -1279,8 +1279,8 @@ values ('96f6c94e-ece3-49c2-8ee1-d4b0e0a45f67', '2018-12-07 02:15:27', '2019-10-
         (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('011c7aa1-89e5-4a1a-97af-b73ed18c5a29', '2018-06-30 07:41:07', '2019-02-27 13:04:38', '2020-03-01 07:32:19',
-        'https://nymag.com/pretium/iaculis/justo/in/hac/habitasse/platea.png', 'bns2ZG1Xr', 301,
-        (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        'https://davidkroell.github.io', 'asdf', 301,
+        '00366fb9-cd76-47e0-b3c6-cbd611650d9e');
 insert into Shortcuts (ID, CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('7866741c-85cc-448f-921a-4309b2f3026f', '2018-02-23 06:29:44', '2019-11-06 19:14:04', '2020-11-12 02:11:31',
         'https://boston.com/at/nulla/suspendisse.jpg', 'CrAp1bD67', 301,
