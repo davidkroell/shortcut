@@ -92,11 +92,11 @@ func InitDatabase(config DBConfig) *Database {
 }
 
 const (
-	deleteFrom string = `DELETE FROM %s WHERE %s = ?;`
+	deleteFrom string = `DELETE FROM %s WHERE %s = ? AND UserID = ?;`
 )
 
 // DeleteFrom
-func DeleteFrom(tableMatcher Matcher, columnMatcher ColumnMatcher, value string) error {
-	_, err := db.Exec(fmt.Sprintf(deleteFrom, tableMatcher, columnMatcher), value)
+func DeleteFrom(tableMatcher Matcher, columnMatcher ColumnMatcher, identifier, userid string) error {
+	_, err := db.Exec(fmt.Sprintf(deleteFrom, tableMatcher, columnMatcher), identifier, userid)
 	return err
 }

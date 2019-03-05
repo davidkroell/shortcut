@@ -18,7 +18,7 @@ type MiddlewareFunc func(http.Handler) http.Handler
 func RequestLogger(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// Do stuff here
-		log.Println(r.RequestURI, r.RemoteAddr, r.UserAgent())
+		log.Println(r.Method, r.RequestURI, r.RemoteAddr, r.UserAgent())
 		// Call the next handler, which can be another middleware in the chain, or the final handler.
 		next.ServeHTTP(w, r)
 	})
@@ -55,18 +55,18 @@ func Authentication(next http.Handler) http.Handler {
 		header := r.Header.Get("Authorization")
 		headerParts := strings.Split(header, "Bearer ")
 		if len(headerParts) < 2 {
-			responseMalformedJWT.JSON(w, http.StatusBadRequest)
+			responseMalformedJWT.JSON(w)
 			return
 		}
 
 		u, err := models.UserJWT(headerParts[1])
 		if err != nil {
 			log.Println(err)
-			responseUnauthorized.JSON(w, http.StatusUnauthorized)
+			responseUnauthorized.JSON(w)
 			return
 		}
 
-		ctx := context.WithValue(r.Context(), "User", &u)
+		ctx := context.WithValue(r.Context(), "User", u)
 		next.ServeHTTP(w, r.WithContext(ctx))
 	})
 }

@@ -1,3 +1,61 @@
+### Get auth token
+
+POST http://localhost:9999/auth
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "hmersh41@dell.com",
+  "password": "40EZ14Q2ns"
+}
+
+### Get auth token
+### should fail
+
+POST http://localhost:9999/auth
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "hmersh41@dell.com",
+  "password": "wrong password"
+}
+
+### Get all shortcuts from authenticated user
+
+GET http://localhost:9999/api/shortcuts
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
+
+### Get all shortcuts from unauthenticated user
+### should fail
+
+GET http://localhost:9999/api/shortcuts
+Accept: application/json
+
+### Get all shortcuts with invalid jwt
+### should fail
+
+GET http://localhost:9999/api/shortcuts
+Accept: application/json
+Authorization: Bearer eyJhbGciOUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwM2ZmINkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO6HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
+
+### Get shortcut with given ID
+
+GET http://localhost:9999/api/shortcuts/011c7aa1-89e5-4a1a-97af-b73ed18c5a29
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
+
+### Get shortcut not belonging to user
+### should fail
+
+GET http://localhost:9999/api/shortcuts/2d97660f-a7b5-41f0-aadc-61e11c654be2
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
+
+### Create shortcut without authorization
+### should fail
+
 POST http://localhost:9999/api/shortcuts
 Content-Type: application/json
 Accept: application/json
@@ -9,21 +67,41 @@ Accept: application/json
   "validThru": "2019-04-01T08:00:00.000+01:00"
 }
 
-###
+### Create shortcut with authorization
 
-GET http://localhost:9999/api/shortcuts
+POST http://localhost:9999/api/shortcuts
+Content-Type: application/json
 Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
 
-###
+{
+  "shortIdentifier": "htl-vil2",
+  "redirectURL": "http://htl-villach.at",
+  "redirectStatus": 301,
+  "validThru": "2019-04-01T08:00:00.000+01:00"
+}
 
-GET http://localhost:9999/api/shortcuts/011c7aa1-89e5-4a1a-97af-b73ed18c5a29
-Accept: application/json
-
-###
+### Update shortcut
 
 PUT http://localhost:9999/api/shortcuts/011c7aa1-89e5-4a1a-97af-b73ed18c5a29
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
+
+{
+  "shortIdentifier": "h",
+  "redirectURL": "http://htl-villach.at",
+  "redirectStatus": 302,
+  "validThru": "2027-04-01T08:00:00.000+01:00"
+}
+
+### Update shortcut not belonging to user
+### should fail
+
+PUT http://localhost:9999/api/shortcuts/ff492de2-6fe5-4163-8ef4-4b5fea837621
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
 
 {
   "shortIdentifier": "htl34",
@@ -32,31 +110,19 @@ Accept: application/json
   "validThru": "2027-04-01T08:00:00.000+01:00"
 }
 
-###
+### Delete shortcut not belonging to user
+### should fial
+
+DELETE http://localhost:9999/api/shortcuts/ff492de2-6fe5-4163-8ef4-4b5fea837621
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
+
+
+### Delete shortcut
 
 DELETE http://localhost:9999/api/shortcuts/011c7aa1-89e5-4a1a-97af-b73ed18c5a29
-Accept: application/json
-
-###
-
-POST http://localhost:9999/auth
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "hmersh41@dell.com",
-  "password": "40EZ14Q2ns"
-}
-
-###
-
-GET http://localhost:9999/api/shortcuts
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
 
 ###
 
-GET http://localhost:9999/api/shortcuts
-Accept: application/json
-
-###

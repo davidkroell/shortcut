@@ -14,7 +14,7 @@ func loginUser(w http.ResponseWriter, r *http.Request) {
 	req := authRequest{}
 
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		responseMalformedBody.JSON(w, http.StatusBadRequest)
+		responseMalformedBody.JSON(w)
 	}
 
 	u, err := models.UserAuth(req.Email, req.Password)
@@ -26,7 +26,7 @@ func loginUser(w http.ResponseWriter, r *http.Request) {
 		ArbitraryJSON(w, resp, http.StatusOK)
 		return
 	} else if err == models.ErrCredentialMismatch {
-		responseCredentialMismath.JSON(w, http.StatusBadRequest)
+		responseCredentialMismath.JSON(w)
 	}
 }
 

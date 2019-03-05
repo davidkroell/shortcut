@@ -3,6 +3,7 @@ package routes
 import (
 	"encoding/json"
 	"github.com/davidkroell/shortcut/models"
+	"github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
 	"net/http"
 	"strconv"
@@ -20,7 +21,18 @@ func createShortcut(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	user := r.Context().Value("User").(*models.User)
+	s.UserID = user.ID
+
 	if err := s.Save(); err != nil {
+		if err.(*mysql.MySQLError).Number == 1062 {
+			Response{
+				Success: false,
+				Code:    1011,
+				Message: "Shortcut with identifier " + s.ShortIdentifer + " already exists",
+			}.JSON(w, http.StatusBadRequest)
+			return
+		}
 		Response{
 			Success: false,
 			Code:    1004,
@@ -52,7 +64,9 @@ func listShortcuts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	shortcuts, err := models.Shortcuts(page, 20)
+	user := r.Context().Value("User").(*models.User)
+
+	shortcuts, err := user.Shortcuts(page, 20)
 	if err != nil {
 		Response{
 			Success: false,
@@ -69,7 +83,9 @@ func getShortcut(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]
 
-	shortcut, err := models.ShortcutBy(models.ID, id)
+	user := r.Context().Value("User").(*models.User)
+
+	shortcut, err := user.ShortcutBy(models.ID, id)
 	if err != nil && err != models.ErrNotFound {
 		Response{
 			Success: false,
@@ -78,11 +94,7 @@ func getShortcut(w http.ResponseWriter, r *http.Request) {
 		}.JSON(w, http.StatusBadRequest)
 		return
 	} else if err == models.ErrNotFound {
-		Response{
-			Success: false,
-			Code:    1002,
-			Message: id + " not found",
-		}.JSON(w, http.StatusNotFound)
+		responseNotFound.JSON(w)
 		return
 	}
 	_ = json.NewEncoder(w).Encode(shortcut)
@@ -91,6 +103,7 @@ func getShortcut(w http.ResponseWriter, r *http.Request) {
 func updateShortcut(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]
+	user := r.Context().Value("User").(*models.User)
 
 	fromDb, err := models.ShortcutBy(models.ID, id)
 	if err != nil && err != models.ErrNotFound {
@@ -101,17 +114,18 @@ func updateShortcut(w http.ResponseWriter, r *http.Request) {
 		}.JSON(w, http.StatusBadRequest)
 		return
 	} else if err == models.ErrNotFound {
-		Response{
-			Success: false,
-			Code:    1002,
-			Message: id + " not found",
-		}.JSON(w, http.StatusNotFound)
+		responseNotFound.JSON(w)
 		return
+	}
+
+	// check if given id belongs to user
+	if fromDb.UserID != user.ID {
+		responseNotFound.JSON(w)
 	}
 
 	fromReq := models.Shortcut{}
 	if err := json.NewDecoder(r.Body).Decode(&fromReq); err != nil {
-		responseMalformedBody.JSON(w, http.StatusBadRequest)
+		responseMalformedBody.JSON(w)
 		return
 	}
 	fromDb.ValidThru = fromReq.ValidThru
@@ -136,8 +150,9 @@ func updateShortcut(w http.ResponseWriter, r *http.Request) {
 
 func deleteShortcut(w http.ResponseWriter, r *http.Request) {
 	id := mux.Vars(r)["id"]
+	user := r.Context().Value("User").(*models.User)
 
-	err := models.DeleteFrom(models.TableShortcuts, models.ID, id)
+	err := models.DeleteFrom(models.TableShortcuts, models.ID, id, user.ID)
 	if err != nil {
 		Response{
 			Success: false,
@@ -145,6 +160,8 @@ func deleteShortcut(w http.ResponseWriter, r *http.Request) {
 			Message: "Failed to delete " + id,
 		}.JSON(w, http.StatusBadRequest)
 		return
+	} else if err == models.ErrNotFound {
+		responseNotFound.JSON(w, 404)
 	}
 
 	Response{
@@ -167,16 +184,11 @@ func forwardShortcut(w http.ResponseWriter, r *http.Request) {
 		}.JSON(w, http.StatusBadRequest)
 		return
 	} else if err == models.ErrNotFound {
-		resp := Response{
-			Success: false,
-			Code:    1002,
-			Message: shortId + " not found",
-		}
 
 		if w.Header().Get("Content-Type") == jsonBody {
-			resp.JSON(w, http.StatusNotFound)
+			responseNotFound.JSON(w)
 		} else {
-			resp.HTML(w, http.StatusNotFound, shortcutNotFound)
+			responseNotFound.HTML(w, shortcutNotFound)
 		}
 		return
 	}
