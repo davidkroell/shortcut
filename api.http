@@ -75,7 +75,7 @@ Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjAwMzY2ZmI5LWNkNzYtNDdlMC1iM2M2LWNiZDYxMTY1MGQ5ZSIsImV4cCI6MTU1Mjk4MDgxMn0.ZigpbO2X26HSlWAZ-XnWLJTy8eYArDo0i8CIZlPal5Y
 
 {
-  "shortIdentifier": "htl-vil2",
+  "shortIdentifier": "htl-viladsfb",
   "redirectURL": "http://htl-villach.at",
   "redirectStatus": 301,
   "validThru": "2019-04-01T08:00:00.000+01:00"

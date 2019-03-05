@@ -11,7 +11,8 @@ type Response struct {
 	Success    bool   `json:"success"`
 	Code       int    `json:"code,omitempty"`
 	Message    string `json:"message,omitempty"`
-	statusCode int    `json:"-"`
+	attrs      map[string]interface{}
+	statusCode int `json:"-"`
 }
 
 var responseMalformedBody = Response{
@@ -49,6 +50,13 @@ var responseNotFound = Response{
 	statusCode: http.StatusNotFound,
 }
 
+var responseUnknownError = Response{
+	Success:    false,
+	Code:       1012,
+	Message:    "unhandled Error",
+	statusCode: http.StatusInternalServerError,
+}
+
 // JSON marshals the Response struct to a JSON string and sets the HTTP Statuscode
 func (r Response) JSON(w http.ResponseWriter, statusCode ...int) {
 	if r.statusCode == 0 && len(statusCode) == 1 {
@@ -58,9 +66,37 @@ func (r Response) JSON(w http.ResponseWriter, statusCode ...int) {
 	}
 }
 
+func (r Response) Attr(key string, value interface{}) Response {
+	if r.attrs == nil {
+		r.attrs = map[string]interface{}{}
+	}
+	r.attrs[key] = value
+	return r
+}
+
 // ArbitraryJSON takes an interface value and a statuscode and writes it to a given http.ResponseWriter
 func ArbitraryJSON(w http.ResponseWriter, value interface{}, statusCode int) {
 	w.WriteHeader(statusCode)
+
+	switch value := value.(type) {
+	case Response:
+		outmap := map[string]interface{}{
+			"success": value.Success,
+			"message": value.Message,
+		}
+		if value.Code != 0 {
+			outmap["code"] = value.Code
+		}
+
+		for k, v := range value.attrs {
+			outmap[k] = v
+		}
+		err := json.NewEncoder(w).Encode(outmap)
+		if err != nil {
+			log.Println(err)
+		}
+		return
+	}
 
 	err := json.NewEncoder(w).Encode(value)
 	if err != nil {

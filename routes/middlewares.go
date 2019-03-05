@@ -6,10 +6,13 @@ import (
 	"log"
 	"net/http"
 	"strings"
+	"time"
 )
 
 var jsonBody = "application/json"
 var htmlBody = "text/html"
+
+const logFormat string = "%s %s %s %s %s"
 
 // MiddlewareFunc is a custom Middleware type
 type MiddlewareFunc func(http.Handler) http.Handler
@@ -17,10 +20,12 @@ type MiddlewareFunc func(http.Handler) http.Handler
 // RequestLogger logs each request
 func RequestLogger(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		// Do stuff here
-		log.Println(r.Method, r.RequestURI, r.RemoteAddr, r.UserAgent())
-		// Call the next handler, which can be another middleware in the chain, or the final handler.
+		start := time.Now()
+
 		next.ServeHTTP(w, r)
+
+		end := time.Since(start)
+		log.Printf(logFormat, r.Method, r.RequestURI, r.RemoteAddr, end, r.UserAgent())
 	})
 }
 

@@ -96,7 +96,14 @@ const (
 )
 
 // DeleteFrom
-func DeleteFrom(tableMatcher Matcher, columnMatcher ColumnMatcher, identifier, userid string) error {
-	_, err := db.Exec(fmt.Sprintf(deleteFrom, tableMatcher, columnMatcher), identifier, userid)
+func DeleteFrom(tm Matcher, cm ColumnMatcher, identifier, userid string) error {
+	result, err := db.Exec(fmt.Sprintf(deleteFrom, tm, cm), identifier, userid)
+
+	n, err := result.RowsAffected()
+	if n == 0 {
+		return ErrNotFound
+	} else if n == 1 {
+		return nil
+	}
 	return err
 }

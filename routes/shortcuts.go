@@ -5,6 +5,7 @@ import (
 	"github.com/davidkroell/shortcut/models"
 	"github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
+	"log"
 	"net/http"
 	"strconv"
 )
@@ -42,9 +43,10 @@ func createShortcut(w http.ResponseWriter, r *http.Request) {
 	}
 
 	Response{
-		Success: true,
-		Message: "created",
-	}.JSON(w, http.StatusCreated)
+		Success:    true,
+		Message:    "created",
+		statusCode: http.StatusCreated,
+	}.Attr("id", s.ID).JSON(w)
 }
 
 func listShortcuts(w http.ResponseWriter, r *http.Request) {
@@ -153,15 +155,13 @@ func deleteShortcut(w http.ResponseWriter, r *http.Request) {
 	user := r.Context().Value("User").(*models.User)
 
 	err := models.DeleteFrom(models.TableShortcuts, models.ID, id, user.ID)
-	if err != nil {
-		Response{
-			Success: false,
-			Code:    1006,
-			Message: "Failed to delete " + id,
-		}.JSON(w, http.StatusBadRequest)
+	if err == models.ErrNotFound {
+		responseNotFound.JSON(w)
 		return
-	} else if err == models.ErrNotFound {
-		responseNotFound.JSON(w, 404)
+	} else if err != nil {
+		log.Println(err)
+		responseUnknownError.JSON(w)
+		return
 	}
 
 	Response{
@@ -171,7 +171,6 @@ func deleteShortcut(w http.ResponseWriter, r *http.Request) {
 }
 
 func forwardShortcut(w http.ResponseWriter, r *http.Request) {
-	//start := time.Now()
 	vars := mux.Vars(r)
 	shortId := vars["shortId"]
 
@@ -192,9 +191,6 @@ func forwardShortcut(w http.ResponseWriter, r *http.Request) {
 		}
 		return
 	}
-
-	//end := time.Since(start)
-	//fmt.Println(end.Nanoseconds() / 1000)
 
 	http.Redirect(w, r, shortcut.RedirectURL, shortcut.RedirectStatus)
 }
