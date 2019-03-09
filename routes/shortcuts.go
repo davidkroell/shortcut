@@ -14,11 +14,7 @@ func createShortcut(w http.ResponseWriter, r *http.Request) {
 	s := models.Shortcut{}
 
 	if err := json.NewDecoder(r.Body).Decode(&s); err != nil {
-		Response{
-			Success: false,
-			Code:    1003,
-			Message: "Malformed JSON body",
-		}.JSON(w, http.StatusBadRequest)
+		responseMalformedBody.JSON(w)
 		return
 	}
 
@@ -27,26 +23,17 @@ func createShortcut(w http.ResponseWriter, r *http.Request) {
 
 	if err := s.Save(); err != nil {
 		if err.(*mysql.MySQLError).Number == 1062 {
-			Response{
-				Success: false,
-				Code:    1011,
-				Message: "Shortcut with identifier " + s.ShortIdentifer + " already exists",
-			}.JSON(w, http.StatusBadRequest)
+			NewResponse(false, "Shortcut with identifier "+s.ShortIdentifer+" already exists", 1011).
+				JSON(w, http.StatusBadRequest)
 			return
 		}
-		Response{
-			Success: false,
-			Code:    1004,
-			Message: "Internal server error. " + err.Error(),
-		}.JSON(w, http.StatusInternalServerError)
+		responseUnknownError.JSON(w)
 		return
 	}
 
-	Response{
-		Success:    true,
-		Message:    "created",
-		statusCode: http.StatusCreated,
-	}.Attr("id", s.ID).JSON(w)
+	NewResponse(true, "created").
+		Attr("id", s.ID).
+		JSON(w, http.StatusCreated)
 }
 
 func listShortcuts(w http.ResponseWriter, r *http.Request) {
@@ -58,11 +45,8 @@ func listShortcuts(w http.ResponseWriter, r *http.Request) {
 
 	page, err := strconv.Atoi(pageStr)
 	if err != nil {
-		Response{
-			Success: false,
-			Code:    1007,
-			Message: "Malformed URL. page must be int value",
-		}.JSON(w, http.StatusBadRequest)
+		NewResponse(false, "Malformed URL. page must be a number", 1007).
+			JSON(w, http.StatusBadRequest)
 		return
 	}
 
@@ -70,11 +54,7 @@ func listShortcuts(w http.ResponseWriter, r *http.Request) {
 
 	shortcuts, err := user.Shortcuts(page, 20)
 	if err != nil {
-		Response{
-			Success: false,
-			Code:    1004,
-			Message: "Internal server error. " + err.Error(),
-		}.JSON(w, http.StatusInternalServerError)
+		responseUnknownError.JSON(w)
 		return
 	}
 
@@ -89,11 +69,8 @@ func getShortcut(w http.ResponseWriter, r *http.Request) {
 
 	shortcut, err := user.ShortcutBy(models.ID, id)
 	if err != nil && err != models.ErrNotFound {
-		Response{
-			Success: false,
-			Code:    1001,
-			Message: "Bad Request. " + err.Error(),
-		}.JSON(w, http.StatusBadRequest)
+		log.Println(err)
+		responseUnknownError.JSON(w)
 		return
 	} else if err == models.ErrNotFound {
 		responseNotFound.JSON(w)
@@ -109,11 +86,8 @@ func updateShortcut(w http.ResponseWriter, r *http.Request) {
 
 	fromDb, err := models.ShortcutBy(models.ID, id)
 	if err != nil && err != models.ErrNotFound {
-		Response{
-			Success: false,
-			Code:    1001,
-			Message: "Bad Request. " + err.Error(),
-		}.JSON(w, http.StatusBadRequest)
+		log.Println(err)
+		responseUnknownError.JSON(w)
 		return
 	} else if err == models.ErrNotFound {
 		responseNotFound.JSON(w)
@@ -123,6 +97,7 @@ func updateShortcut(w http.ResponseWriter, r *http.Request) {
 	// check if given id belongs to user
 	if fromDb.UserID != user.ID {
 		responseNotFound.JSON(w)
+		return
 	}
 
 	fromReq := models.Shortcut{}
@@ -136,18 +111,14 @@ func updateShortcut(w http.ResponseWriter, r *http.Request) {
 	fromDb.ShortIdentifer = fromReq.ShortIdentifer
 
 	if err := fromDb.Save(); err != nil {
-		Response{
-			Success: false,
-			Code:    1005,
-			Message: "could not update. " + err.Error(),
-		}.JSON(w, http.StatusBadRequest)
+		log.Println(err)
+		NewResponse(false, "Could not update", 1005).
+			JSON(w, http.StatusBadRequest)
 		return
 	}
 
-	Response{
-		Success: true,
-		Message: "updated",
-	}.JSON(w, http.StatusOK)
+	NewResponse(true, "updated").
+		JSON(w, http.StatusOK)
 }
 
 func deleteShortcut(w http.ResponseWriter, r *http.Request) {
@@ -164,10 +135,8 @@ func deleteShortcut(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	Response{
-		Success: true,
-		Message: "deleted",
-	}.JSON(w, http.StatusOK)
+	NewResponse(true, "deleted").
+		JSON(w, http.StatusOK)
 }
 
 func forwardShortcut(w http.ResponseWriter, r *http.Request) {
@@ -176,18 +145,15 @@ func forwardShortcut(w http.ResponseWriter, r *http.Request) {
 
 	shortcut, err := models.ShortcutBy(models.ShortIdentifier, shortId)
 	if err != nil && err != models.ErrNotFound {
-		Response{
-			Success: false,
-			Code:    1001,
-			Message: "Bad Request. " + err.Error(),
-		}.JSON(w, http.StatusBadRequest)
+		log.Println(err)
+		responseUnknownError.JSON(w)
 		return
 	} else if err == models.ErrNotFound {
 
 		if w.Header().Get("Content-Type") == jsonBody {
 			responseNotFound.JSON(w)
 		} else {
-			responseNotFound.HTML(w, shortcutNotFound)
+			responseNotFound.Attr("url", shortId).HTML(w, shortcutNotFound)
 		}
 		return
 	}
