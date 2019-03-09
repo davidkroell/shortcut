@@ -35,11 +35,8 @@ func HeaderBinding(next http.Handler) http.Handler {
 
 		if r.Method == "POST" {
 			if r.Header.Get("Content-Type") != jsonBody {
-				Response{
-					Success: false,
-					Code:    1000,
-					Message: "Wrong Content-Type in POST request. application/json expected",
-				}.JSON(w, 400)
+				NewResponse(false, "Wrong Content-Type in POST request. application/json expected", 1000).
+					JSON(w, 400)
 				return
 			}
 		}
