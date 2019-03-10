@@ -2,6 +2,7 @@ package routes
 
 import (
 	"github.com/gorilla/mux"
+	"net/http"
 )
 
 func InitRouter() (router mux.Router) {
@@ -28,5 +29,17 @@ func InitRouter() (router mux.Router) {
 	// redirect route
 	router.HandleFunc("/{shortId:[a-zA-Z0-9]+}", forwardShortcut).Methods("GET")
 
+	router.NotFoundHandler = http.HandlerFunc(notFoundHandler)
+
 	return
+}
+
+func notFoundHandler(w http.ResponseWriter, r *http.Request) {
+	resp := NewResponse(false, "requested page not found")
+
+	if r.Header.Get("Accept") == jsonBody {
+		resp.JSON(w, http.StatusNotFound)
+	} else {
+		resp.HTML(w, shortcutNotFound, http.StatusNotFound)
+	}
 }
