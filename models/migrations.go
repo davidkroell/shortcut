@@ -54,7 +54,6 @@ const (
   Region        VARCHAR(40),
   AccessedAt    DATETIME DEFAULT CURRENT_TIMESTAMP,
 
-  ResponeStatus INT(3),
   ResponseTime  INT(6),
 
   FOREIGN KEY (ShortcutID) REFERENCES Shortcuts (ID)

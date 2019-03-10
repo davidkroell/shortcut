@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"time"
 )
 
 func createShortcut(w http.ResponseWriter, r *http.Request) {
@@ -140,6 +141,8 @@ func deleteShortcut(w http.ResponseWriter, r *http.Request) {
 }
 
 func forwardShortcut(w http.ResponseWriter, r *http.Request) {
+	start := time.Now()
+
 	vars := mux.Vars(r)
 	shortId := vars["shortId"]
 
@@ -157,6 +160,8 @@ func forwardShortcut(w http.ResponseWriter, r *http.Request) {
 		}
 		return
 	}
+
+	shortcut.SaveLog(r.RemoteAddr, r.UserAgent(), time.Since(start))
 
 	http.Redirect(w, r, shortcut.RedirectURL, shortcut.RedirectStatus)
 }
