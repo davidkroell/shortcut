@@ -27,7 +27,7 @@ func dbWriter() {
 }
 
 type logEntry struct {
-	ShortcutID   string
+	ShortcutID   int64
 	IPAddress    string
 	UserAgent    string
 	Region       string

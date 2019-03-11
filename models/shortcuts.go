@@ -7,7 +7,7 @@ import (
 )
 
 type Shortcut struct {
-	ID             string    `json:"id"`
+	ID             int64     `json:"id"`
 	ShortIdentifer string    `json:"shortIdentifier"`
 	RedirectURL    string    `json:"redirectURL"`
 	RedirectStatus int       `json:"redirectStatus"`
@@ -23,7 +23,7 @@ const (
 	selectShortcuts         = `SELECT * FROM Shortcuts LIMIT ?, ?;`
 	selectShortcutsPerUser  = `SELECT * FROM Shortcuts WHERE UserID = ? LIMIT ?, ?;`
 	loadRelatedShortcut     = `SELECT * FROM Users WHERE ID = ?;`
-	insertShortcut          = `INSERT INTO Shortcuts (ID, ShortIdentifier, RedirectURL, RedirectStatus, CreatedAt, UpdatedAt, ValidThru, UserID) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, ?, ?);`
+	insertShortcut          = `INSERT INTO Shortcuts (ShortIdentifier, RedirectURL, RedirectStatus, CreatedAt, UpdatedAt, ValidThru, UserID) VALUES (?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, ?, ?);`
 	updateshortcut          = `UPDATE Shortcuts
 SET ShortIdentifier = ?,
     RedirectURL     = ?,
@@ -97,23 +97,19 @@ func shortcutsFromRows(rows *sql.Rows) ([]Shortcut, error) {
 	return slist, nil
 }
 
-func (s *Shortcut) SetID(id string) {
+func (s *Shortcut) SetID(id int64) {
 	s.ID = id
 }
 
 func (s *Shortcut) Save() error {
-	if s.ID == "" {
+	if s.ID == 0 {
 		return s.create()
 	}
 	return s.update()
 }
 
 func (s *Shortcut) create() error {
-	if err := setUUIDAsID(s); err != nil {
-		return err
-	}
-
-	_, err := db.Exec(insertShortcut, s.ID, s.ShortIdentifer, s.RedirectURL, s.RedirectStatus, s.ValidThru, s.UserID)
+	_, err := db.Exec(insertShortcut, s.ShortIdentifer, s.RedirectURL, s.RedirectStatus, s.ValidThru, s.UserID)
 	return err
 }
 

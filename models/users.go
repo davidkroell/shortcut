@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	insertUser            string = `INSERT INTO Users (ID, Email, Firstname, Lastname, PasswordHash) VALUES (?, ?, ?, ?, ?);`
+	insertUser            string = `INSERT INTO Users (Email, Firstname, Lastname, PasswordHash) VALUES (?, ?, ?, ?);`
 	selectUserBy          string = `SELECT * FROM Users WHERE %s = ?;`
 	selectUserLimitOffset string = `SELECT * FROM Users LIMIT ?, ?;`
 )
@@ -55,11 +55,7 @@ func (u *User) Save() error {
 }
 
 func (u *User) create() error {
-	if err := setUUIDAsID(u); err != nil {
-		return err
-	}
-
-	_, err := db.Exec(insertUser, u.ID, u.Email, u.Firstname, u.LastLogin, u.PasswordHash)
+	_, err := db.Exec(insertUser, u.Email, u.Firstname, u.LastLogin, u.PasswordHash)
 	return err
 }
 

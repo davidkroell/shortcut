@@ -13,7 +13,7 @@ import (
 const (
 	createUsersTable string = `CREATE TABLE Users
 (
-  ID        CHAR(36) PRIMARY KEY,
+  ID        INT AUTO_INCREMENT PRIMARY KEY,
   Email     CHAR(50)    NOT NULL UNIQUE,
   Firstname VARCHAR(50) NOT NULL,
   Lastname  VARCHAR(50) NOT NULL,
@@ -28,14 +28,14 @@ const (
 
 	createShortcutsTable string = `CREATE TABLE Shortcuts
 (
-  ID              CHAR(36) PRIMARY KEY,
+  ID              INT AUTO_INCREMENT PRIMARY KEY,
   ShortIdentifier CHAR(50)      NOT NULL UNIQUE,
   RedirectURL     VARCHAR(1024) NOT NULL,
   RedirectStatus  INT(3)        NOT NULL,
   CreatedAt       DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP,
   UpdatedAt       DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   ValidThru       DATETIME      NOT NULL,
-  UserID          CHAR(36)      NOT NULL,
+  UserID          INT      NOT NULL,
 
   CHECK (ValidThru > CreatedAt),
   CHECK (UpdatedAt >= CreatedAt),
@@ -48,7 +48,7 @@ const (
 
 	createShortcutLogsTable string = `CREATE TABLE ShortcutLog
 (
-  ShortcutID    CHAR(36),
+  ShortcutID    INT,
   IPAddress     VARCHAR(39),
   UserAgent     VARCHAR(100),
   Region        VARCHAR(40),
@@ -115,8 +115,7 @@ func (db *Database) Seed(path string) {
 			case <-time.Tick(500 * time.Millisecond):
 				fmt.Print(".")
 			case <-closer:
-				log.Printf("Seeding finished. %d SQL statements executed\n", counter)
-				closer <- struct{}{}
+				return
 			}
 		}
 	}()
@@ -137,5 +136,5 @@ func (db *Database) Seed(path string) {
 	}
 
 	closer <- struct{}{}
-	<-closer
+	log.Printf("Seeding finished. %d SQL statements executed\n", counter)
 }
