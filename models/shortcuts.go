@@ -35,6 +35,13 @@ WHERE ID = ?;`
 func ShortcutBy(matcher ColumnMatcher, value string) (*Shortcut, error) {
 	s := &Shortcut{}
 
+	if matcher == ShortIdentifier {
+		val, ok := c.Get(value)
+		if ok {
+			return val.(*Shortcut), nil
+		}
+	}
+
 	// make sure user cannot parse matcher by malformed input
 	row := db.QueryRow(fmt.Sprintf(selectShortcutBy, matcher), value)
 	err := row.Scan(&s.ID, &s.ShortIdentifer, &s.RedirectURL, &s.RedirectStatus, &s.CreatedAt, &s.UpdatedAt, &s.ValidThru, &s.UserID)
@@ -43,6 +50,11 @@ func ShortcutBy(matcher ColumnMatcher, value string) (*Shortcut, error) {
 		return nil, err
 	} else if err == sql.ErrNoRows {
 		return nil, ErrNotFound
+	}
+
+	ok := c.Set(s.ShortIdentifer, s, true)
+	if !ok {
+		return s, ErrCache
 	}
 
 	return s, nil
