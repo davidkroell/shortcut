@@ -13,7 +13,7 @@ import (
 
 var db Database
 var singleton sync.Once
-var c = cache.New(time.Minute, 30)
+var cacher = cache.New(time.Minute, 30, 5)
 
 // ErrNotFound is an error, which is raised if no database entries are found
 var ErrNotFound = errors.New("not found")

@@ -36,7 +36,7 @@ func ShortcutBy(matcher ColumnMatcher, value string) (*Shortcut, error) {
 	s := &Shortcut{}
 
 	if matcher == ShortIdentifier {
-		val, ok := c.Get(value)
+		val, ok := cacher.Get(value)
 		if ok {
 			return val.(*Shortcut), nil
 		}
@@ -52,7 +52,7 @@ func ShortcutBy(matcher ColumnMatcher, value string) (*Shortcut, error) {
 		return nil, ErrNotFound
 	}
 
-	ok := c.Set(s.ShortIdentifer, s, true)
+	ok := cacher.Set(s.ShortIdentifer, s, true)
 	if !ok {
 		return s, ErrCache
 	}
