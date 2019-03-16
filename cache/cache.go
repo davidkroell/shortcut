@@ -6,10 +6,20 @@ import (
 )
 
 type Cache struct {
-	mu                 sync.Mutex
-	items              map[string]item
-	maxAccessCount     uint
-	defaultAccessCount uint
+	mu    sync.Mutex
+	items map[string]item
+	Config
+}
+
+type Config struct {
+	DecrInterval                     time.Duration
+	MaxAccessCount, StartAccessCount uint
+}
+
+var DefaultConfig = Config{
+	DecrInterval:     time.Minute,
+	MaxAccessCount:   30,
+	StartAccessCount: 5,
 }
 
 type item struct {
@@ -17,18 +27,17 @@ type item struct {
 	accessCount uint
 }
 
-func New(decrInterval time.Duration, maxAccessCount, defaultAccessCount uint) *Cache {
+func New(conf Config) *Cache {
 	c := Cache{
-		items:              map[string]item{},
-		maxAccessCount:     maxAccessCount,
-		defaultAccessCount: defaultAccessCount,
+		items:  map[string]item{},
+		Config: conf,
 	}
-	go c.manage(decrInterval)
+	go c.manage()
 	return &c
 }
 
-func (c *Cache) manage(decrInterval time.Duration) {
-	t := time.NewTicker(decrInterval)
+func (c *Cache) manage() {
+	t := time.NewTicker(c.DecrInterval)
 	for range t.C {
 		c.mu.Lock()
 		for k, v := range c.items {
@@ -62,7 +71,7 @@ func (c *Cache) Set(k string, v interface{}, force bool) (success bool) {
 	if _, ok := c.items[k]; (ok && force) || !ok {
 		c.items[k] = item{
 			data:        v,
-			accessCount: c.defaultAccessCount,
+			accessCount: c.StartAccessCount,
 		}
 		c.mu.Unlock()
 		return true
@@ -77,7 +86,7 @@ func (c *Cache) Get(k string) (v interface{}, found bool) {
 
 	val, ok := c.items[k]
 	if ok {
-		if val.accessCount < c.maxAccessCount {
+		if val.accessCount < c.MaxAccessCount {
 			val.accessCount++
 			c.items[k] = val
 		}

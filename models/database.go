@@ -13,17 +13,13 @@ import (
 
 var db Database
 var singleton sync.Once
-var cacher = cache.New(time.Minute, 30, 5)
+var cacher = cache.New(cache.DefaultConfig)
 
 // ErrNotFound is an error, which is raised if no database entries are found
 var ErrNotFound = errors.New("not found")
 var ErrCredentialMismatch = errors.New("credentials do not match a user")
 var ErrJWT = errors.New("parsing of JWT failed")
 var ErrCache = errors.New("error in cache")
-
-type Relateable interface {
-	LoadRelated() (err error)
-}
 
 // DBModel eases the handling of database-related structs
 type DBModel interface {
