@@ -161,7 +161,7 @@ Transfer/sec:      0.87MB
 In order to further increase the performance, I've written an in-memory cache,
 which works like the following diagram outlines.
 
-![cache_flow](Cache flow diagram)
+![](cache_flow.jpg)
 
 #### Cache - naive approach 
 The below benchmark shows the performance with just the cache enabled.
