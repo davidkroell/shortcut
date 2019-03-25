@@ -55,10 +55,19 @@ const (
 func InitDatabase(config DBConfig) *Database {
 	// make sure this code only gets executed once
 	singleton.Do(func() {
-		database, err := sql.Open(config.Driver,
-			config.Username+":"+config.Password+"@tcp("+config.Host+")/"+config.Name+"?parseTime=true")
-		if err != nil {
-			log.Fatal(err)
+		var database *sql.DB
+		var err error = nil
+		tries := 0
+
+		for err == nil && tries < 5 {
+			database, err = sql.Open(config.Driver,
+				config.Username+":"+config.Password+"@tcp("+config.Host+")/"+config.Name+"?parseTime=true")
+			if err != nil {
+				log.Println(err)
+				log.Println("Trying again")
+			}
+			time.Sleep(time.Second * 2)
+			tries++
 		}
 
 		// optimize connection pool
