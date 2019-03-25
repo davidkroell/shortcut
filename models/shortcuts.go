@@ -14,7 +14,7 @@ type Shortcut struct {
 	CreatedAt      time.Time `json:"createdAt"`
 	UpdatedAt      time.Time `json:"updatedAt"`
 	ValidThru      time.Time `json:"validThru"`
-	UserID         string
+	UserID         int64
 }
 
 const (

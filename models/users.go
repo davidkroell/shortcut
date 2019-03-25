@@ -20,7 +20,7 @@ const (
 )
 
 type User struct {
-	ID           string    `json:"id"`
+	ID           int64     `json:"id"`
 	Email        string    `json:"email"`
 	Firstname    string    `json:"firstname"`
 	Lastname     string    `json:"lastname"`
@@ -30,7 +30,7 @@ type User struct {
 	LastLogin    time.Time `json:"lastLogin"`
 }
 
-func (u *User) SetID(id string) {
+func (u *User) SetID(id int64) {
 	u.ID = id
 }
 
@@ -42,7 +42,7 @@ func (u *User) SetPassword(pwStr string) {
 	u.passwordHash = hash
 }
 
-func UserBy(matcher ColumnMatcher, value string) (*User, error) {
+func UserBy(matcher ColumnMatcher, value int64) (*User, error) {
 	u := &User{}
 
 	// make sure user cannot parse matcher by malformed input
@@ -59,14 +59,22 @@ func UserBy(matcher ColumnMatcher, value string) (*User, error) {
 }
 
 func (u *User) Save() error {
-	if u.ID == "" {
+	if u.ID == 0 {
 		return u.create()
 	}
 	return u.update()
 }
 
 func (u *User) create() error {
-	_, err := db.Exec(insertUser, u.Email, u.Firstname, u.Lastname, u.passwordHash)
+	res, err := db.Exec(insertUser, u.Email, u.Firstname, u.Lastname, u.passwordHash)
+	if err != nil {
+		return err
+	}
+	id, err := res.LastInsertId()
+	if err != nil {
+		return err
+	}
+	u.ID = id
 	return err
 }
 
@@ -117,7 +125,7 @@ func UserJWT(tokenStr string) (*User, error) {
 		if !ok {
 			return nil, ErrJWT
 		}
-		return UserBy(ID, id.(string))
+		return UserBy(ID, int64(id.(float64)))
 	}
 	return nil, ErrJWT
 }

@@ -24,6 +24,7 @@ var ErrCache = errors.New("error in cache")
 // DBModel eases the handling of database-related structs
 type DBModel interface {
 	Save() (err error)
+	SetID(int64 int64)
 }
 
 // DBConfig
@@ -56,17 +57,17 @@ func InitDatabase(config DBConfig) *Database {
 	// make sure this code only gets executed once
 	singleton.Do(func() {
 		var database *sql.DB
-		var err error = nil
+		var err error = ErrNotFound // just to make sure, it is not nil in the first loop iteration
 		tries := 0
 
-		for err == nil && tries < 5 {
+		for err != nil && tries < 5 {
 			database, err = sql.Open(config.Driver,
 				config.Username+":"+config.Password+"@tcp("+config.Host+")/"+config.Name+"?parseTime=true")
 			if err != nil {
 				log.Println(err)
 				log.Println("Trying again")
+				time.Sleep(time.Second * 2)
 			}
-			time.Sleep(time.Second * 2)
 			tries++
 		}
 
@@ -93,7 +94,7 @@ const (
 )
 
 // DeleteFrom
-func DeleteFrom(tm Matcher, cm ColumnMatcher, identifier, userid string) error {
+func DeleteFrom(tm Matcher, cm ColumnMatcher, identifier, userid int64) error {
 	result, err := db.Exec(fmt.Sprintf(deleteFrom, tm, cm), identifier, userid)
 
 	n, err := result.RowsAffected()

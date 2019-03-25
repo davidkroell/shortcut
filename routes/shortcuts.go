@@ -123,10 +123,15 @@ func updateShortcut(w http.ResponseWriter, r *http.Request) {
 }
 
 func deleteShortcut(w http.ResponseWriter, r *http.Request) {
-	id := mux.Vars(r)["id"]
+	id, err := strconv.Atoi(mux.Vars(r)["id"])
+	if err != nil {
+		log.Println(err)
+		responseMalformedBody.JSON(w)
+		return
+	}
 	user := r.Context().Value("User").(*models.User)
 
-	err := models.DeleteFrom(models.TableShortcuts, models.ID, id, user.ID)
+	err = models.DeleteFrom(models.TableShortcuts, models.ID, int64(id), user.ID)
 	if err == models.ErrNotFound {
 		responseNotFound.JSON(w)
 		return
