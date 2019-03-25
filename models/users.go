@@ -6,12 +6,15 @@ import (
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"golang.org/x/crypto/bcrypt"
+	"log"
 	"os"
 	"time"
 )
 
 const (
-	insertUser            string = `INSERT INTO Users (Email, Firstname, Lastname, PasswordHash) VALUES (?, ?, ?, ?);`
+	insertUser            string = `INSERT INTO Users (Email, Firstname, Lastname, passwordHash) VALUES (?, ?, ?, ?);`
+	updateUser            string = `UPDATE Users SET Firstname = ?, Lastname = ?, passwordHash = ? WHERE ID = ?;`
+	setLastLogin          string = `UPDATE Users SET LastLogin = CURRENT_TIMESTAMP WHERE ID = ?`
 	selectUserBy          string = `SELECT * FROM Users WHERE %s = ?;`
 	selectUserLimitOffset string = `SELECT * FROM Users LIMIT ?, ?;`
 )
@@ -21,7 +24,7 @@ type User struct {
 	Email        string    `json:"email"`
 	Firstname    string    `json:"firstname"`
 	Lastname     string    `json:"lastname"`
-	PasswordHash []byte    `json:"-"`
+	passwordHash []byte    `json:"-"`
 	CreatedAt    time.Time `json:"createdAt"`
 	UpdatedAt    time.Time `json:"updatedAt"`
 	LastLogin    time.Time `json:"lastLogin"`
@@ -31,12 +34,20 @@ func (u *User) SetID(id string) {
 	u.ID = id
 }
 
+func (u *User) SetPassword(pwStr string) {
+	hash, err := bcrypt.GenerateFromPassword([]byte(pwStr), bcrypt.DefaultCost)
+	if err != nil {
+		log.Println(err)
+	}
+	u.passwordHash = hash
+}
+
 func UserBy(matcher ColumnMatcher, value string) (*User, error) {
 	u := &User{}
 
 	// make sure user cannot parse matcher by malformed input
 	row := db.QueryRow(fmt.Sprintf(selectUserBy, matcher), value)
-	err := row.Scan(&u.ID, &u.Email, &u.Firstname, &u.Lastname, &u.PasswordHash, &u.CreatedAt, &u.UpdatedAt, &u.LastLogin)
+	err := row.Scan(&u.ID, &u.Email, &u.Firstname, &u.Lastname, &u.passwordHash, &u.CreatedAt, &u.UpdatedAt, &u.LastLogin)
 
 	if err != nil && err != sql.ErrNoRows {
 		return nil, err
@@ -55,31 +66,39 @@ func (u *User) Save() error {
 }
 
 func (u *User) create() error {
-	_, err := db.Exec(insertUser, u.Email, u.Firstname, u.LastLogin, u.PasswordHash)
+	_, err := db.Exec(insertUser, u.Email, u.Firstname, u.Lastname, u.passwordHash)
 	return err
 }
 
 func (u *User) update() error {
 	// todo implement
-	return nil
+
+	_, err := db.Exec(updateUser, u.Firstname, u.Lastname, u.passwordHash, u.ID)
+	return err
 }
 
 func UserAuth(email, password string) (*User, error) {
 	u := User{}
 	result := db.QueryRow(fmt.Sprintf(selectUserBy, Email), email)
 
-	err := result.Scan(&u.ID, &u.Email, &u.Firstname, &u.Lastname, &u.PasswordHash, &u.CreatedAt, &u.UpdatedAt, &u.LastLogin)
-	if err != nil {
-		return nil, err
+	err := result.Scan(&u.ID, &u.Email, &u.Firstname, &u.Lastname, &u.passwordHash, &u.CreatedAt, &u.UpdatedAt, &u.LastLogin)
+	if err != nil && err != sql.ErrNoRows {
+		log.Println(err)
+		return nil, ErrCredentialMismatch
 	}
-	if u.checkHash(password) {
+	if u.verifyHash(password) {
+		_, err := db.Exec(setLastLogin, u.ID)
+		if err != nil {
+			fmt.Println(err)
+			return nil, ErrCredentialMismatch
+		}
 		return &u, nil
 	}
 	return nil, ErrCredentialMismatch
 }
 
-func (u *User) checkHash(plainText string) bool {
-	err := bcrypt.CompareHashAndPassword(u.PasswordHash, []byte(plainText))
+func (u *User) verifyHash(plainText string) bool {
+	err := bcrypt.CompareHashAndPassword(u.passwordHash, []byte(plainText))
 	return err == nil
 }
 

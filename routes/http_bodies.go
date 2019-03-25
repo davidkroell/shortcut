@@ -43,7 +43,6 @@ func (r Response) JSON(w http.ResponseWriter, statusCode ...int) {
 			delete(r, "statusCode")
 			ArbitraryJSON(w, r, code)
 		} else {
-			log.Println("Error in parsing response map")
 			ArbitraryJSON(w, r, http.StatusOK)
 		}
 	}
@@ -67,4 +66,11 @@ func ArbitraryJSON(w http.ResponseWriter, value interface{}, statusCode int) {
 type authRequest struct {
 	Email    string `json:"email"`
 	Password string `json:"password"`
+}
+
+type registerRequest struct {
+	Email     string `json:"email"`
+	Password  string `json:"password"`
+	Firstname string `json:"firstName"`
+	Lastname  string `json:"lastName"`
 }

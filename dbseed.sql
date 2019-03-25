@@ -28,6 +28,9 @@ values ('cdartnall8@economist.com', 'Catharine', 'Dartnall', 'nzUINCBrrH5',
 insert into Users (Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
 values ('kspringell9@ustream.tv', 'Kerrie', 'Springell', 'cZupr0MuklqF',
         '2018-02-02 11:25:14', '2019-07-07 10:25:16', '2020-06-30 06:23:21');
+insert into Users (Email, Firstname, Lastname, PasswordHash, CreatedAt, UpdatedAt, LastLogin)
+values ('hmersh41@dell.com', 'Hortense', 'Mersh', '$2y$12$tShEMkzDjNDMaquL40hTq.tAfhWEf84OypeotqvIn1vpGO9J.MmA.',
+        '2018-05-30 08:51:24', '2019-09-28 11:54:41', '2020-01-26 18:07:17');
 
 insert into Shortcuts (CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('2018-02-19 04:58:12', '2019-06-30 04:46:55', '2020-12-31 14:46:08',
@@ -56,7 +59,7 @@ values ('2018-01-06 13:48:40', '2019-05-27 10:43:12', '2020-11-01 14:34:39',
         'https://tuttocitta.it/sociis.png', 'a86Jqh', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
 insert into Shortcuts (CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('2018-03-13 11:05:11', '2019-08-28 18:11:47', '2020-05-10 15:16:24',
-        'http://hugedomains.com/vivamus.json', 'VPD0Mgv', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        'http://hugedomains.com/vivamus.json', 'VPD0Mgv', 301, 7);
 insert into Shortcuts (CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('2018-01-23 03:33:33', '2019-03-05 01:49:13', '2020-05-06 10:10:01',
         'https://forbes.com/in.aspx', 'vUEGvl1eFYV', 301, (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
@@ -756,5 +759,5 @@ values ('2018-10-13 17:15:25', '2019-11-15 19:01:57', '2020-09-09 04:46:46',
 insert into Shortcuts (CreatedAt, UpdatedAt, ValidThru, RedirectURL, ShortIdentifier, RedirectStatus, UserID)
 values ('2018-02-07 02:06:29', '2019-05-26 15:48:25', '2020-07-03 11:07:57',
         'http://cloudflare.com/cursus/id/turpis/integer/aliquet.jpg', 'U6gIdTw', 301,
-        (SELECT ID FROM Users ORDER BY RAND() LIMIT 1));
+        11);
 
