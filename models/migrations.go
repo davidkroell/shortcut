@@ -50,7 +50,7 @@ const (
 (
   ShortcutID    INT,
   IPAddress     VARCHAR(39),
-  UserAgent     VARCHAR(100),
+  UserAgent     TEXT,
   Region        VARCHAR(40),
   AccessedAt    DATETIME DEFAULT CURRENT_TIMESTAMP,
 

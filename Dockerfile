@@ -3,13 +3,16 @@ FROM golang:1.12-alpine AS base
 COPY . /go/src/github.com/davidkroell/shortcut
 
 WORKDIR /go/src/github.com/davidkroell/shortcut
-RUN apk add git && GO111MODULE=off go get -u
+RUN apk add git gcc
+
+ENV GO111MODULE=on
+RUN go mod download
 
 # run tests before build
 RUN go test ./... -race
 
-# binary output path: /go/bin/tictacgo
-RUN CGO_ENABLED=0 go build -a -tags netgo -ldflags '-w' -o /go/bin/shortcut *.go
+# binary output path: /go/bin/shortcut
+RUN go build -a -tags netgo -ldflags '-w' -o /go/bin/shortcut *.go
 
 
 FROM scratch
