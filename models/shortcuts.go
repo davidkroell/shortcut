@@ -121,7 +121,15 @@ func (s *Shortcut) Save() error {
 }
 
 func (s *Shortcut) create() error {
-	_, err := db.Exec(insertShortcut, s.ShortIdentifer, s.RedirectURL, s.RedirectStatus, s.ValidThru, s.UserID)
+	res, err := db.Exec(insertShortcut, s.ShortIdentifer, s.RedirectURL, s.RedirectStatus, s.ValidThru, s.UserID)
+	if err != nil {
+		return err
+	}
+	id, err := res.LastInsertId()
+	if err != nil {
+		return err
+	}
+	s.ID = id
 	return err
 }
 
