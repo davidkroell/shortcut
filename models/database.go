@@ -96,6 +96,9 @@ const (
 // DeleteFrom
 func DeleteFrom(tm Matcher, cm ColumnMatcher, identifier, userid int64) error {
 	result, err := db.Exec(fmt.Sprintf(deleteFrom, tm, cm), identifier, userid)
+	if err != nil {
+		return err
+	}
 
 	n, err := result.RowsAffected()
 	if n == 0 {
